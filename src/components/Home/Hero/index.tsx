@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20">
                 <div className='grid grid-cols-1 lg:grid-cols-12 items-center'>
                     <div className='col-span-6'>
-                        <h1 className="text-4xl lg:text-7xl font-semibold mb-5 text-black dark:text-white md:4px lg:text-start text-center">
+                        <h1 className="text-4xl lg:text-7xl font-semibold mb-5 md:4px lg:text-start text-center font-roboto-slab" style={{ color: '#003366' }}>
                             Welcome to Hilltop Bar
                         </h1>
                         <p className='text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center'>
@@ -24,6 +24,13 @@ const Hero = () => {
                                 style={{ backgroundColor: HILLTOP_RED, borderColor: HILLTOP_RED }}
                             >
                                 View Our Menu
+                            </Link>
+                            <Link
+                                href='#history-section'
+                                className='flex items-center text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 lg:px-10 border bg-blue-900 hover:bg-blue-800'
+                                style={{ marginLeft: '12px' }}
+                            >
+                                History
                             </Link>
                         </div>
                     </div>

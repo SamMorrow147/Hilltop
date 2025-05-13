@@ -58,8 +58,8 @@ const Header: React.FC = () => {
     >
       <div className="lg:py-0 py-2">
         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
-          <Logo />
-          <nav className="hidden lg:flex flex-grow items-center gap-8 justify-center">
+          <Logo {...(sticky ? { size: 64 } : { size: 120 })} />
+          <nav className={`hidden lg:flex flex-grow items-center justify-center transition-all duration-300 ${sticky ? 'gap-2 text-sm' : 'gap-8 text-xl'}`}>
             {headerData.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
@@ -68,9 +68,10 @@ const Header: React.FC = () => {
             <Link href="#" className="text-lg font-medium hover:text-primary">
               <Icon
                 icon="solar:phone-bold"
-                className="text-primary text-3xl inline-block me-2"
+                className="text-3xl inline-block me-2"
+                style={{ color: '#9B2323' }}
               />
-              +1(909) 235-9814
+              1-234-567-8910
             </Link>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}

@@ -8,8 +8,8 @@ const About = () => {
         <section id="history-section" className="py-16 bg-white dark:bg-gray-800">
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
                 <div className="text-center mb-12">
-                    <p className="text-primary text-lg font-normal mb-3 tracking-widest uppercase">OUR STORY</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white">
+                    <p className="text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab" style={{ color: '#9B2323' }}>OUR STORY</p>
+                    <h2 className="text-3xl lg:text-5xl font-semibold font-roboto-slab" style={{ color: '#003366' }}>
                         Re-Established 2025 in Historic Hanover
                     </h2>
                 </div>

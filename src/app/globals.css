@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +9,16 @@ html {
 
 section {
   @apply py-20;
+}
+
+.custom-dotted-separator {
+  border-bottom: 2px dotted #003366; /* fallback for old browsers */
+  border-bottom: 0;
+  border-image: repeating-linear-gradient(to right, #003366 0 2px, transparent 2px 12px) 100% 1;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+}
+
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
 }

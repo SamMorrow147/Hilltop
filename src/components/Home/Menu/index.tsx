@@ -54,32 +54,30 @@ const Menu = () => {
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
                 <div className="text-center mb-12">
                     <p className='text-white text-lg font-normal mb-3 tracking-widest uppercase'>HILLTOP BAR</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold text-white">
+                    <h2 className="text-3xl lg:text-5xl font-semibold text-white font-roboto-slab">
                         Food & Drinks
                     </h2>
                     <p className="text-white/90 mt-4">
                         Featuring local favorites and classic pub fare
                     </p>
-                    <div className="flex justify-center mt-8">
-                        <div className="w-40 h-0.5 border-t-4 border-dotted border-white rounded-full" />
-                    </div>
+                    <div className="w-full border-b-8 border-dotted mt-8" style={{ borderColor: '#003366' }}></div>
                 </div>
                 
                 <div className="space-y-12">
                     {menuCategories.map((category, categoryIndex) => (
                         <div key={categoryIndex} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                            <h3 className="text-2xl font-semibold text-black dark:text-white mb-6 flex items-center">
+                            <h3 className="text-3xl font-bold mb-6 flex items-center font-roboto-slab" style={{ color: '#003366' }}>
                                 <Icon icon="solar:fork-knife-bold" className="text-primary mr-2" />
                                 {category.name}
                             </h3>
                             <div className="space-y-4">
                                 {category.items.map((item, itemIndex) => (
-                                    <div key={itemIndex} className="flex justify-between items-start border-b border-gray-200 dark:border-gray-700 pb-4 last:border-0">
+                                    <div key={itemIndex} className="flex justify-between items-start border-b custom-dotted-separator pb-4 last:border-0">
                                         <div className="flex-1">
                                             <h4 className="text-lg font-medium text-black dark:text-white">{item.name}</h4>
                                             <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{item.description}</p>
                                         </div>
-                                        <span className="text-primary font-semibold ml-4">{item.price}</span>
+                                        <span className="font-semibold ml-4" style={{ color: '#9B2323' }}>{item.price}</span>
                                     </div>
                                 ))}
                             </div>

@@ -9,10 +9,11 @@ const Gallery = () => {
         <section>
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md' id='gallery-section'>
                 <div className="text-center">
-                    <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>Our Gallery</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white">
-                        Gallery of our cooked food.
+                    <p className='text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab' style={{ color: '#9B2323' }}>Our Gallery</p>
+                    <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white font-roboto-slab">
+                        Good Food, Good Friends, Good Times.
                     </h2>
+                    <div className="mx-auto mt-2 w-2/3 border-b-4 border-dotted" style={{ borderColor: '#d1d5db', borderBottomStyle: 'dotted', borderBottomWidth: '6px' }}></div>
                 </div>
                 <div className="my-16 px-6">
                     <Masonry
@@ -30,18 +31,13 @@ const Gallery = () => {
                                     height={500}
                                     className="object-cover w-full h-full"
                                 />
-                                <div className="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 p-12 flex flex-col items-start gap-8 justify-end">
+                                <div
+                                    className="w-full h-full absolute left-0 top-0 p-12 flex flex-col items-start gap-8 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:pointer-events-auto"
+                                    style={{ background: 'rgba(155, 35, 35, 0.3)' }}
+                                >
                                     <p className='text-white text-2xl'>
-                                        <span className='font-semibold'>Name:</span> {item.name}
+                                        {item.name}
                                     </p>
-                                    <div className="flex items-center justify-between w-full group-hover:hidden">
-                                        <p className='text-white text-2xl'>
-                                            <span className='font-semibold'>Price:</span> ${item.price}
-                                        </p>
-                                        <Link href="#" className='text-white rounded-full bg-primary border border-primary py-2 px-6 hover:bg-primary/40 hover:backdrop-blur-sm'>
-                                            Learn More
-                                        </Link>
-                                    </div>
                                 </div>
                             </div>
                         ))}

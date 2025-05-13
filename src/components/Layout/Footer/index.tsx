@@ -15,7 +15,7 @@ const Footer: FC = () => {
               <a href="https://www.google.com/maps/search/?api=1&query=29953+109th+Ave+N,+Hanover,+MN+55341" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
                 29953 109th Ave N, Hanover, MN 55341
               </a><br />
-              <a href="tel:+19092359814" className="hover:text-primary">+1 (909) 235-9814</a>
+              <a href="tel:12345678910" className="hover:text-primary" style={{ color: '#9B2323' }}>1-234-567-8910</a>
             </p>
             <p className="text-xs font-medium text-grey dark:text-white/50 mb-16 max-w-70%">
               A Hanover tradition since the 1880s. Good food, good friends, good times.
@@ -50,7 +50,7 @@ const Footer: FC = () => {
         </div>
         <div className="border-t border-grey/15 dark:border-white/15 py-10 flex justify-between items-center">
           <p className="text-sm text-black/70 dark:text-white/70">
-            @2025 - Hilltop Bar. Developed by <Link href="http://clubhausagency.com" target="_blank" className="hover:text-primary">Clubhaus Agency</Link> & <Link href="https://www.shiftcreativedesign.com" target="_blank" className="hover:text-primary">Shift Creative Design</Link>
+            @2025 - Hilltop Bar. Developed by <Link href="https://www.shiftcreativedesign.com" target="_blank" className="hover:text-primary">Shift Creative Design</Link> & <Link href="http://clubhausagency.com" target="_blank" className="hover:text-[#003366]">Clubhaus Agency</Link>
           </p>
         </div>
       </div>

@@ -14,9 +14,15 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <div className="w-full flex justify-between py-2 bg-transparent">
+        {Array.from({ length: 60 }).map((_, i) => (
+          <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#9B2323' }}></span>
+        ))}
+      </div>
       <About />
       <Menu />
       <Gallery />
+      <div className="w-full border-b-8 border-dotted" style={{ borderColor: '#003366' }}></div>
     </main>
   );
 }
