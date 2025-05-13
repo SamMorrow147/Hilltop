@@ -37,9 +37,9 @@ const Hero = () => {
                         <Image
                             src="/images/logo/HilltopLogo.png"
                             alt="Hilltop Bar & Grill Logo"
-                            width={400}
-                            height={400}
-                            className="object-contain shadow-xl"
+                            width={480}
+                            height={480}
+                            className="object-contain"
                             priority
                         />
                     </div>
