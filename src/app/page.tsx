@@ -3,7 +3,6 @@ import Hero from "@/components/Home/Hero";
 import About from "@/components/Home/About";
 import Menu from "@/components/Home/Menu";
 import Gallery from "@/components/Home/Gallery";
-import Newsletter from "@/components/Home/Newsletter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,7 +17,6 @@ export default function Home() {
       <About />
       <Menu />
       <Gallery />
-      <Newsletter />
     </main>
   );
 }
