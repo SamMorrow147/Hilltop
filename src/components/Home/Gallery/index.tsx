@@ -13,7 +13,11 @@ const Gallery = () => {
                     <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white font-roboto-slab">
                         Good Food, Good Friends, Good Times.
                     </h2>
-                    <div className="w-full border-b-8 border-dotted mt-4 mb-8 mx-auto" style={{ borderColor: '#003366' }}></div>
+                    <div className="flex justify-between py-2 bg-transparent gap-1 mt-4 mb-8">
+                        {Array.from({ length: 20 }).map((_, i) => (
+                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+                        ))}
+                    </div>
                 </div>
                 <div className="my-16 px-6">
                     <Masonry

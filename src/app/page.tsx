@@ -23,7 +23,11 @@ export default function Home() {
       <Menu />
       <Gallery />
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 my-8">
-        <div className="border-b-8 border-dotted" style={{ borderColor: '#003366' }}></div>
+        <div className="flex justify-between py-2 bg-transparent gap-1">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+          ))}
+        </div>
       </div>
     </main>
   );

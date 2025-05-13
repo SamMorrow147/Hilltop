@@ -60,7 +60,11 @@ const Menu = () => {
                     <p className="text-white/90 mt-4 text-center">
                         Featuring local favorites and classic pub fare
                     </p>
-                    <div className="w-full border-b-8 border-dotted mt-8" style={{ borderColor: '#003366' }}></div>
+                    <div className="flex justify-between py-2 bg-transparent gap-1 mt-8">
+                        {Array.from({ length: 20 }).map((_, i) => (
+                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+                        ))}
+                    </div>
                 </div>
                 
                 <div className="space-y-12">
