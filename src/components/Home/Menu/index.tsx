@@ -54,10 +54,10 @@ const Menu = () => {
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
                 <div className="text-center mb-12">
                     <p className='text-white text-lg font-normal mb-3 tracking-widest uppercase'>HILLTOP BAR</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold text-white font-roboto-slab">
+                    <h2 className="bg-[#9B2323] px-12 text-4xl sm:text-5xl lg:text-7xl font-semibold text-white font-roboto-slab whitespace-nowrap mx-4">
                         Food & Drinks
                     </h2>
-                    <p className="text-white/90 mt-4">
+                    <p className="text-white/90 mt-4 text-center">
                         Featuring local favorites and classic pub fare
                     </p>
                     <div className="w-full border-b-8 border-dotted mt-8" style={{ borderColor: '#003366' }}></div>

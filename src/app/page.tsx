@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="w-full flex justify-between py-2 bg-transparent">
-        {Array.from({ length: 60 }).map((_, i) => (
+      <div className="flex justify-between py-2 bg-transparent gap-1">
+        {Array.from({ length: 20 }).map((_, i) => (
           <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#9B2323' }}></span>
         ))}
       </div>
       <About />
       <Menu />
       <Gallery />
-      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 my-8">
         <div className="border-b-8 border-dotted" style={{ borderColor: '#003366' }}></div>
       </div>
     </main>

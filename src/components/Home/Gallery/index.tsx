@@ -13,7 +13,7 @@ const Gallery = () => {
                     <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white font-roboto-slab">
                         Good Food, Good Friends, Good Times.
                     </h2>
-                    <div className="mx-auto mt-2 w-2/3 border-b-4 border-dotted" style={{ borderColor: '#d1d5db', borderBottomStyle: 'dotted', borderBottomWidth: '6px' }}></div>
+                    <div className="w-full border-b-8 border-dotted mt-4 mb-8 mx-auto" style={{ borderColor: '#003366' }}></div>
                 </div>
                 <div className="my-16 px-6">
                     <Masonry
