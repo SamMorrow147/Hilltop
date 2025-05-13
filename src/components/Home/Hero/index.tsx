@@ -17,18 +17,17 @@ const Hero = () => {
                             Re-Established 2025 in Historic Hanover<br />
                             A gathering place for the community since the 1880s
                         </p>
-                        <div className='md:flex align-middle justify-center lg:justify-start'>
+                        <div className='flex flex-row align-middle justify-center lg:justify-start gap-4'>
                             <Link
                                 href='#menu-section'
-                                className='text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 lg:px-14 mr-6 border'
+                                className='text-xl font-medium rounded-full text-white py-5 px-6 lg:px-14 border'
                                 style={{ backgroundColor: HILLTOP_RED, borderColor: HILLTOP_RED }}
                             >
                                 View Our Menu
                             </Link>
                             <Link
                                 href='#history-section'
-                                className='flex items-center text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 lg:px-10 border bg-blue-900 hover:bg-blue-800'
-                                style={{ marginLeft: '12px' }}
+                                className='flex items-center text-xl font-medium rounded-full text-white py-5 px-6 lg:px-10 border bg-blue-900 hover:bg-blue-800'
                             >
                                 History
                             </Link>

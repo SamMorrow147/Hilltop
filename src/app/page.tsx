@@ -22,7 +22,9 @@ export default function Home() {
       <About />
       <Menu />
       <Gallery />
-      <div className="w-full border-b-8 border-dotted" style={{ borderColor: '#003366' }}></div>
+      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
+        <div className="border-b-8 border-dotted" style={{ borderColor: '#003366' }}></div>
+      </div>
     </main>
   );
 }
