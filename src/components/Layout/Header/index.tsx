@@ -73,6 +73,22 @@ const Header: React.FC = () => {
               />
               1-234-567-8910
             </Link>
+            <div className="hidden md:flex items-center gap-3">
+              <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
+                <Icon
+                  icon="fa6-brands:facebook-f"
+                  className="text-xl"
+                  style={{ color: '#003366' }}
+                />
+              </Link>
+              <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
+                <Icon
+                  icon="fa6-brands:instagram"
+                  className="text-xl"
+                  style={{ color: '#003366' }}
+                />
+              </Link>
+            </div>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="block lg:hidden p-2 rounded-lg"
