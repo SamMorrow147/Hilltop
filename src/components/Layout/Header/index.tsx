@@ -69,7 +69,7 @@ const Header: React.FC = () => {
               <Icon
                 icon="solar:phone-bold"
                 className="text-3xl inline-block me-2"
-                style={{ color: '#9B2323' }}
+                style={{ color: '#000000' }}
               />
               1-234-567-8910
             </Link>

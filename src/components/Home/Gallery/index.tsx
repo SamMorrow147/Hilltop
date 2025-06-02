@@ -9,13 +9,13 @@ const Gallery = () => {
         <section>
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md' id='gallery-section'>
                 <div className="text-center">
-                    <p className='text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab' style={{ color: '#9B2323' }}>Our Gallery</p>
+                    <p className='text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab text-black'>Our Gallery</p>
                     <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white font-roboto-slab">
                         Good Food, Good Friends, Good Times.
                     </h2>
                     <div className="flex justify-between py-2 bg-transparent gap-1 md:gap-0.5 mt-4 mb-8">
                         {Array.from({ length: 20 }).map((_, i) => (
-                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#000000' }}></span>
                         ))}
                     </div>
                 </div>

@@ -25,7 +25,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       <Link
         href={item.href}
         className={`text-xl flex font-medium duration-300 hover:!text-[#9B2323]`}
-        style={{ color: path === item.href ? '#003366' : '#003366' }}
+        style={{ color: path === item.href ? '#000000' : '#000000' }}
       >
         {item.label}
         {item.submenu && (

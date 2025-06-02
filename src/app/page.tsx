@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <div className="flex justify-between py-2 bg-transparent gap-3 md:gap-0">
         {Array.from({ length: 60 }).map((_, i) => (
-          <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#9B2323' }}></span>
+          <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#000000' }}></span>
         ))}
       </div>
       <About />
@@ -25,7 +25,7 @@ export default function Home() {
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 my-8">
         <div className="flex justify-between py-2 bg-transparent gap-1 md:gap-0.5">
           {Array.from({ length: 20 }).map((_, i) => (
-            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#000000' }}></span>
           ))}
         </div>
       </div>

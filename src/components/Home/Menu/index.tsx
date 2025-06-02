@@ -50,19 +50,19 @@ const Menu = () => {
     ];
 
     return (
-        <section id="menu-section" className="py-16" style={{ backgroundColor: HILLTOP_RED }}>
+        <section id="menu-section" className="py-16" style={{ backgroundColor: '#e6e2c0' }}>
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
                 <div className="text-center mb-12">
-                    <p className='text-white text-lg font-normal mb-3 tracking-widest uppercase'>HILLTOP BAR</p>
-                    <h2 className="bg-[#9B2323] px-12 text-4xl sm:text-5xl lg:text-7xl font-semibold text-white font-roboto-slab whitespace-nowrap mx-4">
+                    <p className='text-black text-lg font-normal mb-3 tracking-widest uppercase'>HILLTOP BAR</p>
+                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-semibold text-black font-roboto-slab whitespace-nowrap mx-4">
                         Food & Drinks
                     </h2>
-                    <p className="text-white/90 mt-4 text-center">
+                    <p className="text-black/90 mt-4 text-center">
                         Featuring local favorites and classic pub fare
                     </p>
                     <div className="flex justify-between py-2 bg-transparent gap-1 md:gap-0.5 mt-8">
                         {Array.from({ length: 20 }).map((_, i) => (
-                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#003366' }}></span>
+                            <span key={i} className="w-2 h-2 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: '#000000' }}></span>
                         ))}
                     </div>
                 </div>
@@ -70,7 +70,7 @@ const Menu = () => {
                 <div className="space-y-12">
                     {menuCategories.map((category, categoryIndex) => (
                         <div key={categoryIndex} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-                            <h3 className="text-3xl font-bold mb-6 flex items-center font-roboto-slab" style={{ color: '#003366' }}>
+                            <h3 className="text-3xl font-bold mb-6 flex items-center font-roboto-slab text-black">
                                 <Icon icon="solar:fork-knife-bold" className="text-primary mr-2" />
                                 {category.name}
                             </h3>

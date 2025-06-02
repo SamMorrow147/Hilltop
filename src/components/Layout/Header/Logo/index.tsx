@@ -5,7 +5,7 @@ const Logo: React.FC<{ size?: number }> = ({ size = 120 }) => {
   return (
     <Link href="/" className="flex items-center justify-center rounded-full bg-white p-2 shadow-md" style={{ width: size, height: size }}>
       <Image
-        src="/images/logo/HilltopLogo.png"
+        src="/images/logo/new-logo.png"
         alt="Hilltop Bar & Grill Logo"
         width={size - 4}
         height={size - 4}

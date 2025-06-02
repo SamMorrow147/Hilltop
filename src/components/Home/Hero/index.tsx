@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20">
                 <div className='grid grid-cols-1 lg:grid-cols-12 items-center'>
                     <div className='col-span-6'>
-                        <h1 className="text-4xl lg:text-7xl font-semibold mb-5 md:4px lg:text-start text-center font-roboto-slab" style={{ color: '#003366' }}>
+                        <h1 className="text-4xl lg:text-7xl font-semibold mb-5 md:4px lg:text-start text-center font-roboto-slab" style={{ color: '#000000' }}>
                             Welcome to Hilltop Bar
                         </h1>
                         <p className='text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center'>
@@ -20,14 +20,14 @@ const Hero = () => {
                         <div className='flex flex-row align-middle justify-center lg:justify-start gap-4'>
                             <Link
                                 href='#menu-section'
-                                className='text-xl font-medium rounded-full text-white py-5 px-6 lg:px-14 border'
-                                style={{ backgroundColor: HILLTOP_RED, borderColor: HILLTOP_RED }}
+                                className='text-xl font-medium rounded-full text-black py-5 px-6 lg:px-14 border'
+                                style={{ backgroundColor: '#e6e2c0', borderColor: '#e6e2c0' }}
                             >
                                 View Our Menu
                             </Link>
                             <Link
                                 href='#history-section'
-                                className='flex items-center text-xl font-medium rounded-full text-white py-5 px-6 lg:px-10 border bg-blue-900 hover:bg-blue-800'
+                                className='flex items-center text-xl font-medium rounded-full text-white py-5 px-6 lg:px-10 border bg-black hover:bg-gray-800'
                             >
                                 History
                             </Link>
@@ -35,7 +35,7 @@ const Hero = () => {
                     </div>
                     <div className="relative h-[500px] flex items-center justify-center col-span-6">
                         <Image
-                            src="/images/logo/HilltopLogo.png"
+                            src="/images/logo/new-logo.png"
                             alt="Hilltop Bar & Grill Logo"
                             width={480}
                             height={480}
