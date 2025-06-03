@@ -36,12 +36,9 @@ const Gallery = () => {
                                     className="object-cover w-full h-full"
                                 />
                                 <div
-                                    className="w-full h-full absolute left-0 top-0 p-12 flex flex-col items-start gap-8 justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:pointer-events-auto"
-                                    style={{ background: 'rgba(155, 35, 35, 0.3)' }}
+                                    className="w-full h-full absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                    style={{ backgroundColor: 'rgba(230, 226, 192, 0.3)' }}
                                 >
-                                    <p className='text-white text-2xl'>
-                                        {item.name}
-                                    </p>
                                 </div>
                             </div>
                         ))}

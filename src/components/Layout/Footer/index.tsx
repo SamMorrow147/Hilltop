@@ -6,16 +6,16 @@ import Logo from "../Header/Logo";
 
 const Footer: FC = () => {
   return (
-    <footer className="pt-16 bg-darkmode">
+    <footer className="bg-darkmode">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-5 lg:gap-20 md:gap-6 sm:gap-12 gap-6  pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-5 lg:gap-20 md:gap-6 sm:gap-12 gap-6">
           <div className="col-span-2">
             <Logo />
             <p className="text-xs font-medium text-grey dark:text-white/50 mt-5">
               <a href="https://www.google.com/maps/search/?api=1&query=29953+109th+Ave+N,+Hanover,+MN+55341" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
                 29953 109th Ave N, Hanover, MN 55341
               </a><br />
-              <a href="tel:12345678910" className="hover:text-primary" style={{ color: '#9B2323' }}>1-234-567-8910</a>
+              <a href="tel:7632728140" className="hover:text-primary" style={{ color: '#9B2323' }}>763-272-8140</a>
             </p>
             <p className="text-xs font-medium text-grey dark:text-white/50 mb-16 max-w-70%">
               A Hanover tradition since the 1880s. Good food, good friends, good times.

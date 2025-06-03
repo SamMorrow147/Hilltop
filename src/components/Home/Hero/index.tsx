@@ -33,13 +33,19 @@ const Hero = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="relative h-[500px] flex items-center justify-center col-span-6">
+                    <div className="relative h-[600px] flex items-center justify-center col-span-6">
                         <Image
-                            src="/images/logo/new-logo.png"
-                            alt="Hilltop Bar & Grill Logo"
-                            width={480}
-                            height={480}
-                            className="object-contain"
+                            src="/images/Hilltop-bar-ca-2002.jpg"
+                            alt="Historic Hilltop Bar circa 2002"
+                            width={600}
+                            height={600}
+                            className="object-cover rounded-lg"
+                            style={{
+                                maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 96%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 4%, rgba(0,0,0,1) 96%, transparent 100%)',
+                                maskComposite: 'intersect',
+                                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 96%, transparent 100%), linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 4%, rgba(0,0,0,1) 96%, transparent 100%)',
+                                WebkitMaskComposite: 'source-in'
+                            }}
                             priority
                         />
                     </div>

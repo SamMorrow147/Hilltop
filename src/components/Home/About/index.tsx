@@ -10,7 +10,7 @@ const About = () => {
                 <div className="text-center mb-12">
                     <p className="text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab text-black">OUR STORY</p>
                     <h2 className="text-3xl lg:text-5xl font-semibold font-roboto-slab text-black">
-                        Re-Established 2025 in Historic Hanover
+                        Hilltop Bar & Grill – Re-Established 2025
                     </h2>
                 </div>
 
@@ -18,8 +18,8 @@ const About = () => {
                     <div className="space-y-6">
                         <div className="relative h-[400px] rounded-lg overflow-hidden">
                             <Image
-                                src="/images/Hilltop-bar-ca-2002.jpg"
-                                alt="Historic Hilltop Bar circa 2002"
+                                src="/images/Hero-Img.jpg"
+                                alt="Hilltop Bar Hero Image"
                                 fill
                                 className="object-cover"
                             />
@@ -46,24 +46,44 @@ const About = () => {
 
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold text-black dark:text-white">
-                            A Piece of Hanover History
+                            A Hanover Legend Returns
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Since the 1880s, the Hilltop Bar has been a cornerstone of the Hanover community. 
-                            Originally established as a gathering place for local farmers and travelers, our 
-                            historic building has witnessed the evolution of our town through the decades.
+                            Originally built in 1916, the Hilltop Bar & Grill was a beloved Hanover landmark for over 
+                            a century — known for its legendary burgers, small-town charm, and even the 
+                            occasional Bob Dylan sighting. When it shut its doors in 2017, its absence left a 
+                            noticeable void in the community.
                         </p>
                         <p className="text-gray-600 dark:text-gray-300">
-                            The bar's location near the historic bridge has made it a landmark in the community, 
-                            with stories of famous visitors and local legends becoming part of our rich history. 
-                            The bridge itself, a symbol of connection and community, has been a witness to countless 
-                            stories and memories.
+                            We are so excited to bring The Hilltop back to life — fully renovated, thoughtfully 
+                            reimagined, and ready to write its next chapter! Keeping the same heart but updating it 
+                            with a fresh new look, updated classics, cold tap beer and specialty cocktails, pull tabs, 
+                            and that same Hilltop Spirit you remember—or have always heard about.
                         </p>
                         <p className="text-gray-600 dark:text-gray-300">
-                            In 2025, we're proud to reopen our doors, bringing new life to this historic space 
-                            while preserving its authentic character and charm. Our renovation honors the building's 
-                            heritage while creating a modern gathering place for the community.
+                            This isn't just a reopening. It's a revival. A celebration of the past with big sights for the 
+                            future. We can't wait to reopen the doors in August and raise a glass to what was—and 
+                            what's next!
                         </p>
+
+                        <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg mt-8">
+                            <h4 className="text-xl font-semibold text-black dark:text-white mb-4">Hours & Location</h4>
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="font-medium text-black dark:text-white">Hours:</p>
+                                    <p className="text-gray-600 dark:text-gray-300">Sunday Through Thursday: 11am to 11pm</p>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">Kitchen Closes at 10pm</p>
+                                    <p className="text-gray-600 dark:text-gray-300">Friday & Saturday: 11am to 1am</p>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">Kitchen closes at 11pm</p>
+                                </div>
+                                <div>
+                                    <p className="font-medium text-black dark:text-white">Location:</p>
+                                    <p className="text-gray-600 dark:text-gray-300">29953 109th Ave N</p>
+                                    <p className="text-gray-600 dark:text-gray-300">Hanover, MN 55341</p>
+                                    <p className="text-gray-600 dark:text-gray-300">763-272-8140</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

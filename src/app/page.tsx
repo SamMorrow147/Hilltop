@@ -3,6 +3,8 @@ import Hero from "@/components/Home/Hero";
 import About from "@/components/Home/About";
 import Menu from "@/components/Home/Menu";
 import Gallery from "@/components/Home/Gallery";
+import HiringCTA from "@/components/Home/HiringCTA";
+import HoursLocation from "@/components/Home/HoursLocation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,6 +31,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <HiringCTA />
+      <HoursLocation />
     </main>
   );
 }

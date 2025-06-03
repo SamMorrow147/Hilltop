@@ -88,6 +88,21 @@ const Menu = () => {
                         </div>
                     ))}
                 </div>
+
+                <div className="mt-12 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg text-center">
+                    <h3 className="text-2xl font-semibold text-black dark:text-white mb-3">
+                        Menu & Takeout
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-2">
+                        Menu is almost finalized - full menu coming soon!
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                        <strong>Takeout Available</strong> - Online ordering system coming soon once POS is set up.
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        Call ahead for takeout orders: 763-272-8140
+                    </p>
+                </div>
             </div>
         </section>
     );

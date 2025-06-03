@@ -5,4 +5,5 @@ export const headerData: HeaderItem[] = [
   { label: "History", href: "#history-section" },
   { label: "Menu", href: "#menu-section" },
   { label: "Gallery", href: "#gallery-section" },
+  { label: "Hiring", href: "/hiring" },
 ];

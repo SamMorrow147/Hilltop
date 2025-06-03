@@ -65,13 +65,13 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-lg font-medium hover:text-primary">
+            <Link href="tel:7632728140" className="text-lg font-medium hover:text-primary">
               <Icon
                 icon="solar:phone-bold"
                 className="text-3xl inline-block me-2"
                 style={{ color: '#000000' }}
               />
-              1-234-567-8910
+              763-272-8140
             </Link>
             <div className="hidden md:flex items-center gap-3">
               <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
