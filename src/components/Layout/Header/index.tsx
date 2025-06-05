@@ -78,14 +78,14 @@ const Header: React.FC = () => {
                 <Icon
                   icon="fa6-brands:facebook-f"
                   className="text-xl"
-                  style={{ color: '#ffffff' }}
+                  style={{ color: sticky ? '#000000' : '#ffffff' }}
                 />
               </Link>
               <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
                 <Icon
                   icon="fa6-brands:instagram"
                   className="text-xl"
-                  style={{ color: '#ffffff' }}
+                  style={{ color: sticky ? '#000000' : '#ffffff' }}
                 />
               </Link>
             </div>
@@ -141,14 +141,14 @@ const Header: React.FC = () => {
                   <Icon
                     icon="fa6-brands:facebook-f"
                     className="text-2xl"
-                    style={{ color: '#ffffff' }}
+                    style={{ color: sticky ? '#000000' : '#ffffff' }}
                   />
                 </Link>
                 <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
                   <Icon
                     icon="fa6-brands:instagram"
                     className="text-2xl"
-                    style={{ color: '#ffffff' }}
+                    style={{ color: sticky ? '#000000' : '#ffffff' }}
                   />
                 </Link>
               </div>
