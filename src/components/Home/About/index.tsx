@@ -38,8 +38,8 @@ const About = () => {
                     >
                         <div className="relative h-[400px] rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
                             <Image
-                                src="/images/Hero-Img.jpg"
-                                alt="Hilltop Bar Hero Image"
+                                src="/images/hero-image-new.png"
+                                alt="Historic Hilltop Bar circa 2002"
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-cover"

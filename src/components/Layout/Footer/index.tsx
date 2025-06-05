@@ -21,7 +21,7 @@ const Footer: FC = () => {
               A Hanover tradition since the 1880s. Good food, good friends, good times.
             </p>
             <div className="flex gap-6 items-center">
-              <Link href="#" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
+              <Link href="https://www.facebook.com/hilltophanover" target="_blank" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
                 <Icon
                   icon="fa6-brands:facebook-f"
                   width="16"
@@ -29,17 +29,9 @@ const Footer: FC = () => {
                   className=" group-hover:text-white text-black"
                 />
               </Link>
-              <Link href="#" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
+              <Link href="https://www.instagram.com/hilltophanover" target="_blank" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
                 <Icon
                   icon="fa6-brands:instagram"
-                  width="16"
-                  height="16"
-                  className=" group-hover:text-white text-black"
-                />
-              </Link>
-              <Link href="#" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
-                <Icon
-                  icon="fa6-brands:x-twitter"
                   width="16"
                   height="16"
                   className=" group-hover:text-white text-black"

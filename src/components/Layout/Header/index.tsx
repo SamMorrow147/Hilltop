@@ -74,14 +74,14 @@ const Header: React.FC = () => {
               <span>763-272-8140</span>
             </Link>
             <div className="hidden md:flex items-center gap-3">
-              <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
+              <Link href="https://www.facebook.com/hilltophanover" target="_blank" className="hover:opacity-80">
                 <Icon
                   icon="fa6-brands:facebook-f"
                   className="text-xl"
                   style={{ color: sticky ? '#000000' : '#ffffff' }}
                 />
               </Link>
-              <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
+              <Link href="https://www.instagram.com/hilltophanover" target="_blank" className="hover:opacity-80">
                 <Icon
                   icon="fa6-brands:instagram"
                   className="text-xl"
@@ -137,14 +137,14 @@ const Header: React.FC = () => {
                 763-272-8140
               </Link>
               <div className="flex items-center gap-4">
-                <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
+                <Link href="https://www.facebook.com/hilltophanover" target="_blank" className="hover:opacity-80">
                   <Icon
                     icon="fa6-brands:facebook-f"
                     className="text-2xl"
                     style={{ color: sticky ? '#000000' : '#ffffff' }}
                   />
                 </Link>
-                <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
+                <Link href="https://www.instagram.com/hilltophanover" target="_blank" className="hover:opacity-80">
                   <Icon
                     icon="fa6-brands:instagram"
                     className="text-2xl"
