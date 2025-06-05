@@ -25,7 +25,7 @@ export default function Application() {
 
           <div className="max-w-4xl mx-auto mb-16">
             {/* JotForm Embed - Using iframe approach */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg min-h-[600px]">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <iframe
                 id="JotFormIFrame-251536213151042"
                 title="Job Application Form"
@@ -37,7 +37,7 @@ export default function Application() {
                 style={{
                   minWidth: '100%',
                   maxWidth: '100%',
-                  height: '539px',
+                  height: '3500px',
                   border: 'none'
                 }}
                 scrolling="no"
