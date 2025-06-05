@@ -10,7 +10,7 @@ const HiringCTA = () => {
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
                 <div 
                     ref={ctaRef}
-                    className={`bg-white pl-12 pt-12 pb-12 rounded-lg shadow-lg text-center max-w-4xl mx-auto transform transition-all duration-1000 ease-out ${
+                    className={`bg-white p-12 rounded-lg shadow-lg text-center max-w-4xl mx-auto transform transition-all duration-1000 ease-out ${
                         ctaVisible 
                             ? 'translate-y-0 opacity-100 scale-100' 
                             : 'translate-y-12 opacity-0 scale-95'
