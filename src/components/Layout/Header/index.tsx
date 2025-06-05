@@ -53,50 +53,50 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full transition-all duration-300 ${sticky ? " shadow-lg bg-white dark:bg-gray-600 py-4" : "shadow-none py-8"
+      className={`fixed top-0 z-40 w-full transition-all duration-300 overflow-x-hidden ${sticky ? " shadow-lg bg-white dark:bg-gray-600 py-4" : "shadow-none py-8"
         }`}
     >
-      <div className="lg:py-0 py-2">
-        <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
-          <Logo {...(sticky ? { size: 64 } : { size: 120 })} />
+      <div className="lg:py-0 py-2 overflow-x-hidden">
+        <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4 overflow-x-hidden">
+          <Logo {...(sticky ? { size: 80 } : { size: 200, mobileSize: 120 })} />
           <nav className={`hidden lg:flex flex-grow items-center justify-center transition-all duration-300 ${sticky ? 'gap-2 text-sm' : 'gap-8 text-xl'}`}>
             {headerData.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </nav>
-          <div className="flex items-center gap-4">
-            <Link href="tel:7632728140" className="text-lg font-medium hover:text-primary">
+          <div className="flex items-center gap-2 sm:gap-4 overflow-x-hidden">
+            <Link href="tel:7632728140" className="hidden md:flex text-sm lg:text-lg font-medium hover:text-primary items-center">
               <Icon
                 icon="solar:phone-bold"
-                className="text-3xl inline-block me-2"
+                className="text-2xl lg:text-3xl inline-block me-1 lg:me-2"
                 style={{ color: '#000000' }}
               />
-              763-272-8140
+              <span>763-272-8140</span>
             </Link>
             <div className="hidden md:flex items-center gap-3">
               <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
                 <Icon
                   icon="fa6-brands:facebook-f"
                   className="text-xl"
-                  style={{ color: '#003366' }}
+                  style={{ color: '#ffffff' }}
                 />
               </Link>
               <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
                 <Icon
                   icon="fa6-brands:instagram"
                   className="text-xl"
-                  style={{ color: '#003366' }}
+                  style={{ color: '#ffffff' }}
                 />
               </Link>
             </div>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
-              className="block lg:hidden p-2 rounded-lg"
+              className="block lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle mobile menu"
             >
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
-              <span className="block w-6 h-0.5 bg-white mt-1.5"></span>
+              <span className="block w-6 h-0.5 bg-black dark:bg-white transition-colors"></span>
+              <span className="block w-6 h-0.5 bg-black dark:bg-white mt-1.5 transition-colors"></span>
+              <span className="block w-6 h-0.5 bg-black dark:bg-white mt-1.5 transition-colors"></span>
             </button>
           </div>
         </div>
@@ -105,24 +105,54 @@ const Header: React.FC = () => {
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${navbarOpen ? "translate-x-0" : "translate-x-full"
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 max-w-xs overflow-x-hidden ${navbarOpen ? "translate-x-0" : "translate-x-full"
             } z-50`}
         >
-          <div className="flex items-center justify-between p-4">
-            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text">
+          <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800">
+            <h2 className="text-lg font-bold text-black dark:text-white">
               <Logo />
             </h2>
 
             <button
               onClick={() => setNavbarOpen(false)}
-              className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 dark:invert"
+              className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 invert"
               aria-label="Close menu Modal"
             ></button>
           </div>
-          <nav className="flex flex-col items-start p-4">
+          <nav className="flex flex-col items-start p-4 bg-white dark:bg-gray-900">
             {headerData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
+            <div className="border-t border-gray-200 dark:border-gray-600 mt-4 pt-4 w-full">
+              <Link 
+                href="tel:7632728140" 
+                className="flex items-center text-lg font-medium hover:text-primary mb-4 text-black dark:text-white"
+                onClick={() => setNavbarOpen(false)}
+              >
+                <Icon
+                  icon="solar:phone-bold"
+                  className="text-2xl inline-block me-3"
+                  style={{ color: '#000000' }}
+                />
+                763-272-8140
+              </Link>
+              <div className="flex items-center gap-4">
+                <Link href="https://facebook.com" target="_blank" className="hover:opacity-80">
+                  <Icon
+                    icon="fa6-brands:facebook-f"
+                    className="text-2xl"
+                    style={{ color: '#ffffff' }}
+                  />
+                </Link>
+                <Link href="https://instagram.com" target="_blank" className="hover:opacity-80">
+                  <Icon
+                    icon="fa6-brands:instagram"
+                    className="text-2xl"
+                    style={{ color: '#ffffff' }}
+                  />
+                </Link>
+              </div>
+            </div>
           </nav>
         </div>
       </div>
