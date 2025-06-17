@@ -70,10 +70,10 @@ const HoursLocation = () => {
                                     <p className="text-gray-600 dark:text-gray-300">29953 109th Ave N</p>
                                     <p className="text-gray-600 dark:text-gray-300">Hanover, MN 55341</p>
                                 </div>
-                                <div className="flex items-center">
+                                {/* <div className="flex items-center">
                                     <Icon icon="solar:phone-bold" className="mr-2" style={{ color: '#9B2323' }} />
                                     <p className="text-gray-600 dark:text-gray-300">763-272-8140</p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

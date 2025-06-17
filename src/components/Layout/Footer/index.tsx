@@ -15,13 +15,13 @@ const Footer: FC = () => {
               <a href="https://www.google.com/maps/search/?api=1&query=29953+109th+Ave+N,+Hanover,+MN+55341" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
                 29953 109th Ave N, Hanover, MN 55341
               </a><br />
-              <a href="tel:7632728140" className="hover:text-primary" style={{ color: '#9B2323' }}>763-272-8140</a>
+              {/* <a href="tel:7632728140" className="hover:text-primary" style={{ color: '#9B2323' }}>763-272-8140</a> */}
             </p>
             <p className="text-xs font-medium text-grey dark:text-white/50 mb-16 max-w-70%">
               A Hanover tradition since the 1880s. Good food, good friends, good times.
             </p>
             <div className="flex gap-6 items-center">
-              <Link href="https://www.facebook.com/hilltophanover" target="_blank" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
+              <Link href="https://www.facebook.com/profile.php?id=61575227142376" target="_blank" className="group bg-white hover:bg-primary rounded-full shadow-xl p-3">
                 <Icon
                   icon="fa6-brands:facebook-f"
                   width="16"

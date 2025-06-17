@@ -65,8 +65,8 @@ export const ExpertData: {
 
 // data.tsx
 export const galleryImages = [
-  { src: '/images/Gallery/foodone.jpg', name: 'Caesar Salad', price: 35 },
-  { src: '/images/Gallery/foodtwo.jpg', name: 'Christmas salad', price: 17 },
-  { src: '/images/Gallery/foodthree.jpg', name: 'Sauteed mushrooms with pumpkin and sweet pepper', price: 45 },
-  { src: '/images/Gallery/foodfour.jpg', name: 'BBQ Chicken Feast Pizza', price: 27 },
+  { src: '/images/Gallery/foodone.jpg', name: 'Ahi Tuna Poke Bowl', price: 35 },
+  { src: '/images/Gallery/foodtwo.jpg', name: 'Cobb Chicken Salad', price: 17 },
+  { src: '/images/Gallery/foodthree.jpg', name: 'Traditional Buffalo Wings', price: 45 },
+  { src: '/images/Gallery/foodfour.jpg', name: 'Classic Smashburger', price: 27 },
 ];

@@ -91,7 +91,16 @@ const Hero = () => {
                                 : 'translate-y-8 opacity-0 scale-95'
                         }`}
                         style={{ transitionDelay: '800ms' }}>
-                            <Logo size={300} />
+                            <Image
+                                src="/images/logo/HT-Long-Logo.png"
+                                alt="Hilltop Bar &amp; Grill Logo"
+                                width={400}
+                                height={200}
+                                style={{ objectFit: 'contain' }}
+                                className="w-full h-auto max-w-[400px]"
+                                quality={100}
+                                priority
+                            />
                         </div>
                     </div>
                 </div>

@@ -122,12 +122,12 @@ const Menu = () => {
                     <p className="text-black/70 mb-6">
                         *Menu items and prices subject to change. Please call ahead for current availability.
                     </p>
-                    <Link
+                    {/* <Link
                         href="tel:7632728140"
                         className="inline-flex items-center px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-gray-800 transform hover:scale-105 transition-all duration-200"
                     >
                         Call to Order: 763-272-8140
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </section>
