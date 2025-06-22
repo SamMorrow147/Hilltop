@@ -41,8 +41,10 @@ const Footer: FC = () => {
           </div>
         </div>
         <div className="border-t border-grey/15 dark:border-white/15 py-10 flex justify-between items-center">
-          <p className="text-sm text-black/70 dark:text-white/70">
-            @2025 - Hilltop Bar. Developed by <Link href="https://www.shiftcreativedesign.com" target="_blank" className="hover:text-primary">Shift Creative Design</Link> & <Link href="http://clubhausagency.com" target="_blank" className="hover:text-[#003366]">Clubhaus Agency</Link>
+          <p className="text-sm text-black/70 dark:text-white/70 flex items-center gap-2">
+            @2025 - Hilltop Bar. Developed by <Link href="https://www.shiftcreativedesign.com" target="_blank" className="hover:opacity-80">
+              <img src="/images/CH-Footer.webp" alt="Shift Creative Design" className="h-4 inline" />
+            </Link>
           </p>
         </div>
       </div>

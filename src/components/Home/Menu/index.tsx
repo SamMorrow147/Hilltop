@@ -106,9 +106,6 @@ const Menu = () => {
                             <h3 className="text-3xl font-bold text-black mb-4 font-roboto-slab">
                                 Menu Coming Soon
                             </h3>
-                            <p className="text-gray-700 mb-6">
-                                We're finalizing our delicious menu offerings. Check back soon or call us for current availability!
-                            </p>
                         </div>
                     </div>
                 </div>

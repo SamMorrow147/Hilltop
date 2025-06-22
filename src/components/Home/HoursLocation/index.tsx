@@ -42,16 +42,7 @@ const HoursLocation = () => {
                                 Hours
                             </h3>
                             <div className="space-y-4">
-                                <div>
-                                    <p className="font-medium text-black dark:text-white">Sunday – Thursday</p>
-                                    <p className="text-gray-600 dark:text-gray-300">11 am – 11 pm</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">Kitchen closes at 10 pm</p>
-                                </div>
-                                <div>
-                                    <p className="font-medium text-black dark:text-white">Friday & Saturday</p>
-                                    <p className="text-gray-600 dark:text-gray-300">11 am – 1 am</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">Kitchen closes at 11 pm</p>
-                                </div>
+                                <p className="font-medium text-black dark:text-white text-center text-xl">Coming Soon</p>
                             </div>
                         </div>
 
