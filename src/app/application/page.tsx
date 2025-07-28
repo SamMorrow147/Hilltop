@@ -27,17 +27,15 @@ export default function Application() {
             {/* JotForm Embed - Using iframe approach */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <iframe
-                id="JotFormIFrame-251536213151042"
-                title="Job Application Form"
-                allowTransparency={true}
-                allowFullScreen={true}
-                allow="geolocation; microphone; camera"
-                src="https://form.jotform.com/251536213151042"
+                id="JotFormIFrame-252027161193147"
+                title="Clone of Hilltop Application Jotform"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://form.jotform.com/252027161193147"
                 frameBorder="0"
                 style={{
                   minWidth: '100%',
                   maxWidth: '100%',
-                  height: '3500px',
+                  height: '6000px',
                   border: 'none'
                 }}
                 scrolling="no"
@@ -46,21 +44,7 @@ export default function Application() {
               <script 
                 dangerouslySetInnerHTML={{
                   __html: `
-                    window.handleIFrameMessage = function(e) {
-                      if (typeof e.data === 'object') { return; }
-                      var args = e.data.split(':');
-                      if (args.length > 2) {
-                        var iframe = document.getElementById('JotFormIFrame-' + args[(args.length - 1)]);
-                        if (iframe && args[1]) {
-                          iframe.style.height = args[1] + 'px';
-                        }
-                      }
-                    };
-                    if (window.addEventListener) {
-                      window.addEventListener('message', handleIFrameMessage, false);
-                    } else if (window.attachEvent) {
-                      window.attachEvent('onmessage', handleIFrameMessage);
-                    }
+                    window.jotformEmbedHandler("iframe[id='JotFormIFrame-252027161193147']", "https://form.jotform.com/");
                   `
                 }}
               />
