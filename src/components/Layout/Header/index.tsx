@@ -65,14 +65,6 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-2 sm:gap-4 overflow-x-hidden">
-            {/* <Link href="tel:7632728140" className="hidden md:flex text-sm lg:text-lg font-medium hover:text-primary items-center">
-              <Icon
-                icon="solar:phone-bold"
-                className="text-2xl lg:text-3xl inline-block me-1 lg:me-2"
-                style={{ color: '#000000' }}
-              />
-              <span>763-272-8140</span>
-            </Link> */}
             <div className="hidden md:flex items-center gap-3">
               <Link href="https://www.facebook.com/profile.php?id=61575227142376" target="_blank" className="hover:opacity-80">
                 <Icon
@@ -124,18 +116,6 @@ const Header: React.FC = () => {
               <MobileHeaderLink key={index} item={item} />
             ))}
             <div className="border-t border-gray-200 dark:border-gray-600 mt-4 pt-4 w-full">
-              {/* <Link 
-                href="tel:7632728140" 
-                className="flex items-center text-lg font-medium hover:text-primary mb-4 text-black dark:text-white"
-                onClick={() => setNavbarOpen(false)}
-              >
-                <Icon
-                  icon="solar:phone-bold"
-                  className="text-2xl inline-block me-3"
-                  style={{ color: '#000000' }}
-                />
-                763-272-8140
-              </Link> */}
               <div className="flex items-center gap-4">
                 <Link href="https://www.facebook.com/profile.php?id=61575227142376" target="_blank" className="hover:opacity-80">
                   <Icon

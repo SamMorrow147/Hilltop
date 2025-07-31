@@ -4,8 +4,16 @@ import Image from "next/image";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Menu = () => {
-    const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.3 });
-    const { ref: menuGridRef, isVisible: menuGridVisible } = useScrollAnimation({ threshold: 0.2 });
+    const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ 
+        threshold: 0.05, 
+        rootMargin: '0px 0px 0px 0px',
+        triggerOnce: true
+    });
+    const { ref: menuGridRef, isVisible: menuGridVisible } = useScrollAnimation({ 
+        threshold: 0.05, 
+        rootMargin: '0px 0px 0px 0px',
+        triggerOnce: true 
+    });
 
     const menuSections = [
         {
