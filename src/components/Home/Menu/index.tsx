@@ -20,11 +20,6 @@ const Menu = () => {
             title: "APPETIZERS",
             items: [
                 {
-                    name: "BARBACOA NACHOS",
-                    description: "Slow braised barbacoa beef, jalapeño, pico de gallo, lettuce, seasoned sour cream, avocado salsa and queso blanco",
-                    dietary: "[GF]"
-                },
-                {
                     name: "BUFFALO CHICKEN WONTONS",
                     description: "Buffalo chicken, cream cheese, celery and green onion with coleslaw and your choice of ranch or bleu cheese dressing"
                 },
@@ -34,7 +29,7 @@ const Menu = () => {
                 },
                 {
                     name: "TRADITIONAL BONE-IN WINGS",
-                    description: "Buffalo, firecracker, cajun or lemon pepper dry rub. Served with ranch or bleu cheese dressing",
+                    description: "Buffalo, firecracker, cajun (dry rub). Served with ranch or bleu cheese dressing",
                     dietary: "[GF]"
                 },
                 {
@@ -58,29 +53,27 @@ const Menu = () => {
                 },
                 {
                     name: "COBB SALAD",
-                    description: "Grilled marinated chicken, bacon, hard boiled egg, avocado, tomato, red onion, croutons and mixed cheese with your choice of dressing. Available with plain chicken [GF]"
+                    description: "Grilled marinated chicken, bacon, hard boiled egg, avocado, tomato, red onion, craisins and mixed cheese with your choice of dressing. Available with plain chicken",
+                    dietary: "[GF]"
                 },
                 {
                     name: "CHIPOTLE BOWL",
-                    description: "Southwest chicken, onions and peppers, black beans, slaw mix, queso fresco, pepitas and guacamole over brown rice with a side of cilantro lime dressing. Available with plain chicken [GF]"
+                    description: "Southwest chicken, onions and peppers, black beans, slaw mix, queso fresco, pepitas and guacamole over brown rice with a side of cilantro lime dressing. Available with plain chicken [GF]",
+                    dietary: "[GF]"
                 },
                 {
                     name: "AHI TUNA POKE BOWL",
                     description: "Raw marinated ahi tuna, avocado, carrots, cucumbers, radishes and edamame over jasmine rice topped with sesame seeds, scallions and served with a side of Thai chili dressing"
-                },
-                {
-                    name: "SANTA FE STEAK BOWL",
-                    description: "Marinated skirt steak, grilled onions and peppers, pico de gallo, avocado, wontons and mixed cheese over jasmine rice with a side of ranch dressing"
                 }
             ]
         },
         {
             title: "HILLY SMASH BURGERS",
-            subtitle: "Two ¼ pound smashed patties on a grilled bun served with chips. Upgrade to waffle fries for $2.50 or a side salad for $3.50",
+            subtitle: "Two ¼ pound smashed patties served with chips. Upgrade to waffle fries for $2.50 or a side salad for $3.50",
             items: [
                 {
                     name: "HILLTOP",
-                    description: "American cheese, garlic aioli, lettuce, tomato and onion. Add bacon | 2"
+                    description: "American cheese, lettuce, tomato and onion; add bacon | 2"
                 },
                 {
                     name: "BBQ BACON",
@@ -88,7 +81,7 @@ const Menu = () => {
                 },
                 {
                     name: "MR. JIMMY",
-                    description: "American and cheddar cheese, grilled onions, lettuce, tomato and Jimmy sauce. Add bacon | 2"
+                    description: "American and cheddar cheese, grilled onions, lettuce, tomato and Jimmy sauce"
                 },
                 {
                     name: "HANGOVER",
@@ -100,7 +93,7 @@ const Menu = () => {
                 },
                 {
                     name: "PATTY MELT",
-                    description: "Swiss cheese and grilled onions on rye bread"
+                    description: "1/2 lb patty with swiss cheese, grilled onions and jimmy sauce on marble rye sourdough bread"
                 }
             ]
         },
@@ -109,20 +102,16 @@ const Menu = () => {
             subtitle: "All handhelds are served with chips. Upgrade to waffle fries for $2.50 or a side salad for $3.50",
             items: [
                 {
-                    name: "FRIED CHICKEN SANDWICH",
-                    description: "Swiss cheese, pickles, lettuce, tomato, onion and mayo. Available original, buffalo or Nashville hot"
+                    name: "TERIYAKI CHICKEN SANDWICH",
+                    description: "Marinated grilled chicken breast, swiss cheese, bacon, lettuce, tomato, onion and mayo"
                 },
                 {
-                    name: "GRILLED CHICKEN SANDWICH",
-                    description: "Swiss cheese, bacon, lettuce, tomato, onion and mayo"
+                    name: "BUFFALO CHICKEN WRAP",
+                    description: "Crispy buffalo chicken, celery, lettuce, mixed cheese and ranch dressing"
                 },
                 {
-                    name: "WALLEYE SLIDERS",
-                    description: "2 sliders with hand battered walleye, American cheese, lettuce and tartar"
-                },
-                {
-                    name: "CLUBHOUSE SANDWICH",
-                    description: "Turkey, ham, bacon, American cheese, lettuce, tomato and mayo"
+                    name: "FIRECRACKER CHICKEN WRAP",
+                    description: "Crispy firecracker chicken, white rice, pico de gallo, mixed cheese and ranch dressing"
                 },
                 {
                     name: "CHICKEN STRIPS",
@@ -131,40 +120,18 @@ const Menu = () => {
             ]
         },
         {
-            title: "FAJITAS & TACOS",
-            subtitle: "Served with a side of tortilla chips & salsa. Add guacamole | 2, Add queso | 1",
-            items: [
-                {
-                    name: "CHICKEN FAJITAS",
-                    description: "Onions and peppers, flour tortillas, pico de gallo, lettuce, cheese, pickled jalapeños, sour cream and salsa. Corn tortilla available upon request [GF]"
-                },
-                {
-                    name: "BIRRIA TACOS",
-                    description: "2 crispy corn tortillas dipped in homemade birria consume stuffed with slow braised barbacoa beef, cheese, onion and cilantro, served with a side of birria consume for dipping",
-                    dietary: "[GF]"
-                },
-                {
-                    name: "CARNE ASADA TACOS",
-                    description: "Tacos with marinated skirt steak, lettuce, cotija cheese, onion and cilantro. Corn tortillas available upon request [GF]"
-                }
-            ]
-        },
-        {
             title: "BROASTED CHICKEN",
             items: [
                 {
-                    name: "HALF BIRD (4 PIECE)",
-                    description: "A breast, wing, thigh and drummy broasted in house with homemade coleslaw and waffle fries"
-                },
-                {
-                    name: "FULL BIRD (8 PIECE)",
-                    description: "2 breasts, 2 wings, 2 thighs and 2 drummies broasted in house with homemade coleslaw and waffle fries"
+                    name: "BROASTED CHICKEN DINNER",
+                    description: "A breast, wing, thigh and a drummy broasted in house with homemade coleslaw and waffle fries"
                 }
             ]
         },
         {
             title: "SHAKES & MALTS",
-            subtitle: "All malts & shakes are topped with whipped cream & cherry",
+            subtitle: "",
+            comingSoon: true,
             items: [
                 {
                     name: "VANILLA",
@@ -260,35 +227,44 @@ const Menu = () => {
                                         {section.subtitle}
                                     </p>
                                 )}
-                                <div className="space-y-4">
-                                    {section.items.map((item, itemIndex) => (
-                                        <div 
-                                            key={itemIndex}
-                                            className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0"
-                                        >
-                                            <div className="flex items-start justify-between">
-                                                <div className="flex-1">
-                                                    <h4 className="font-semibold text-black text-lg flex items-center">
-                                                        {item.name}
-                                                        {item.dietary && (
-                                                            <Image
-                                                                src="/images/gluten-free.svg"
-                                                                alt="Gluten-free"
-                                                                width={20}
-                                                                height={20}
-                                                                className="ml-2"
-                                                            />
+                                <div className={`space-y-4 ${section.comingSoon ? 'relative' : ''}`}>
+                                    {section.comingSoon && (
+                                        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-10 rounded-lg">
+                                            <h3 className="text-3xl font-bold text-black font-roboto-slab tracking-wide">
+                                                COMING SOON
+                                            </h3>
+                                        </div>
+                                    )}
+                                    <div className={section.comingSoon ? 'blur-sm opacity-50' : ''}>
+                                        {section.items.map((item, itemIndex) => (
+                                            <div 
+                                                key={itemIndex}
+                                                className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0"
+                                            >
+                                                <div className="flex items-start justify-between">
+                                                    <div className="flex-1">
+                                                        <h4 className="font-semibold text-black text-lg flex items-center">
+                                                            {item.name}
+                                                            {'dietary' in item && item.dietary && (
+                                                                <Image
+                                                                    src="/images/gluten-free.svg"
+                                                                    alt="Gluten-free"
+                                                                    width={20}
+                                                                    height={20}
+                                                                    className="ml-2"
+                                                                />
+                                                            )}
+                                                        </h4>
+                                                        {item.description && (
+                                                            <p className="text-gray-700 mt-2 text-sm leading-relaxed">
+                                                                {item.description}
+                                                            </p>
                                                         )}
-                                                    </h4>
-                                                    {item.description && (
-                                                        <p className="text-gray-700 mt-2 text-sm leading-relaxed">
-                                                            {item.description}
-                                                        </p>
-                                                    )}
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ))}
