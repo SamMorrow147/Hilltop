@@ -35,22 +35,12 @@ const Menu = () => {
                 {
                     name: "BONELESS WINGS",
                     description: "Buffalo, BBQ or firecracker. Served with ranch or bleu cheese dressing"
-                },
-                {
-                    name: "WAFFLE FRY APPETIZER",
-                    description: "Crispy golden fries tossed in a rosemary garlic seasoning and served with seasoned sour cream",
-                    dietary: "[GF]"
                 }
             ]
         },
         {
             title: "SALADS & BOWLS",
             items: [
-                {
-                    name: "QUINOA CHICKEN SALAD",
-                    description: "Grilled chicken, quinoa, avocado, chopped spinach, roasted peppers, fresh herbs, pickled jalapeños, feta cheese, honey citrus dressing and mango yogurt dressing",
-                    dietary: "[GF]"
-                },
                 {
                     name: "COBB SALAD",
                     description: "Grilled marinated chicken, bacon, hard boiled egg, avocado, tomato, red onion, craisins and mixed cheese with your choice of dressing. Available with plain chicken",
@@ -82,10 +72,6 @@ const Menu = () => {
                 {
                     name: "MR. JIMMY",
                     description: "American and cheddar cheese, grilled onions, lettuce, tomato and Jimmy sauce"
-                },
-                {
-                    name: "HANGOVER",
-                    description: "American cheese, fried egg, bacon, avocado, pico de gallo and chipotle aioli"
                 },
                 {
                     name: "'SHROOM & SWISS",
@@ -129,9 +115,8 @@ const Menu = () => {
             ]
         },
         {
-            title: "SHAKES & MALTS",
-            subtitle: "",
-            comingSoon: true,
+            title: "SHAKES",
+            subtitle: "all shakes are topped with whipped cream & cherry",
             items: [
                 {
                     name: "VANILLA",
@@ -146,7 +131,7 @@ const Menu = () => {
                     description: ""
                 },
                 {
-                    name: "COOKIES & CREAM",
+                    name: "OREO",
                     description: ""
                 }
             ]
