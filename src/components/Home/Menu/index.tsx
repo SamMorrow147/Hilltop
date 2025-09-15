@@ -212,15 +212,15 @@ const Menu = () => {
                                         {section.subtitle}
                                     </p>
                                 )}
-                                <div className={`space-y-4 ${section.comingSoon ? 'relative' : ''}`}>
-                                    {section.comingSoon && (
+                                <div className={`space-y-4 ${(section as any).comingSoon ? 'relative' : ''}`}>
+                                    {(section as any).comingSoon && (
                                         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-10 rounded-lg">
                                             <h3 className="text-3xl font-bold text-black font-roboto-slab tracking-wide">
                                                 COMING SOON
                                             </h3>
                                         </div>
                                     )}
-                                    <div className={section.comingSoon ? 'blur-sm opacity-50' : ''}>
+                                    <div className={(section as any).comingSoon ? 'blur-sm opacity-50' : ''}>
                                         {section.items.map((item, itemIndex) => (
                                             <div 
                                                 key={itemIndex}
