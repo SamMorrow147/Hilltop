@@ -22,19 +22,24 @@ const Hero = () => {
     return (
         <section 
             id="home-section" 
-            className="relative"
-            style={{ 
-                backgroundColor: '#e6e2c0',
-                backgroundImage: 'url(/images/Hero-Background.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
+            className="relative overflow-hidden"
         >
-            {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 opacity-70 z-0" style={{ backgroundColor: '#e6e2c0' }}></div>
+            {/* Background Video */}
+            <video
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                autoPlay
+                muted
+                loop
+                playsInline
+            >
+                <source src="/Videos/HilltopVideoHeader2_SM.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             
-            <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-8 lg:pt-12 relative z-10">
+            {/* Semi-transparent overlay */}
+            <div className="absolute inset-0 opacity-70 z-10" style={{ backgroundColor: '#e6e2c0' }}></div>
+            
+            <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-8 lg:pt-12 relative z-20">
                 <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-4 lg:gap-8'>
                     <div className='col-span-6 order-2 lg:order-1'>
                         <h1 className="text-4xl lg:text-7xl font-semibold mb-5 md:4px lg:text-start text-center font-roboto-slab overflow-hidden" style={{ color: '#000000' }}>
