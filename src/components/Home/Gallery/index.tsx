@@ -20,10 +20,6 @@ const Gallery = () => {
                             : 'translate-y-12 opacity-0'
                     }`}
                 >
-                    <p className='text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab text-black'>Our Gallery</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold text-black dark:text-white font-roboto-slab">
-                        Good Food, Good Friends, Good Times.
-                    </h2>
                     <div className="w-full overflow-hidden mt-4 mb-8">
                         <div className="flex justify-center py-2 bg-transparent gap-8 md:gap-12 max-w-full">
                             {Array.from({ length: 15 }).map((_, i) => (
@@ -84,7 +80,7 @@ const Gallery = () => {
                                     alt={item.name}
                                     width={600}
                                     height={500}
-                                    className="object-cover w-full h-full transition-transform duration-300"
+                                    className="object-cover w-full h-full transition-transform duration-300 scale-105"
                                 />
                                 <div
                                     className="w-full h-full absolute left-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"

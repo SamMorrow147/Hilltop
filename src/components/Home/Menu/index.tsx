@@ -17,91 +17,114 @@ const Menu = () => {
 
     const menuSections = [
         {
-            title: "APPETIZERS",
-            items: [
-                {
-                    name: "BUFFALO CHICKEN WONTONS",
-                    description: "Buffalo chicken, cream cheese, celery and green onion with coleslaw and your choice of ranch or bleu cheese dressing"
-                },
-                {
-                    name: "CHEESE CURDS",
-                    description: "Served with a side of marinara"
-                },
-                {
-                    name: "TRADITIONAL BONE-IN WINGS",
-                    description: "Buffalo, firecracker, cajun (dry rub). Served with ranch or bleu cheese dressing",
-                    dietary: "[GF]"
-                },
-                {
-                    name: "BONELESS WINGS",
-                    description: "Buffalo, BBQ or firecracker. Served with ranch or bleu cheese dressing"
-                }
-            ]
-        },
-        {
             title: "SALADS & BOWLS",
             items: [
                 {
-                    name: "COBB SALAD",
-                    description: "Grilled marinated chicken, bacon, hard boiled egg, avocado, tomato, red onion, craisins and mixed cheese with your choice of dressing. Available with plain chicken",
-                    dietary: "[GF]"
+                    name: "CHIPOTLE BOWL",
+                    description: "Southwest chicken, onions, peppers, black beans, queso fresco, pepitas, guacamole, brown rice, cilantro lime dressing. Available with plain chicken",
+                    price: "16.95"
                 },
                 {
-                    name: "CHIPOTLE BOWL",
-                    description: "Southwest chicken, onions and peppers, black beans, slaw mix, queso fresco, pepitas and guacamole over brown rice with a side of cilantro lime dressing. Available with plain chicken [GF]",
-                    dietary: "[GF]"
+                    name: "COBB SALAD",
+                    description: "Marinated chicken, lettuce, bacon, egg, avocado, tomato, onion, craisins, cheese. Available with plain chicken",
+                    price: "14.95"
                 },
                 {
                     name: "AHI TUNA POKE BOWL",
-                    description: "Raw marinated ahi tuna, avocado, carrots, cucumbers, radishes and edamame over jasmine rice topped with sesame seeds, scallions and served with a side of Thai chili dressing"
+                    description: "Raw, marinated ahi tuna, avocado, carrots, cucumbers, radishes, edamame, sesame seeds, scallion, jasmine rice, Thai chili dressing",
+                    price: "16.95"
+                },
+                {
+                    name: "CHICKEN QUINOA SALAD",
+                    description: "Blackened chicken, spinach, quinoa, avocado, peppers, jalapeños, feta, honey citrus, mango yogurt dressing",
+                    price: "14.95"
                 }
             ]
         },
         {
             title: "HILLY SMASH BURGERS",
-            subtitle: "Two ¼ pound smashed patties served with chips. Upgrade to waffle fries for $2.50 or a side salad for $3.50",
+            subtitle: "Two ¼ pound smashed patties served with chips. Upgrade to waffle fries for $2.50. Upgrade to side salad or cup of chili for $3.50. All burgers are gluten friendly",
             items: [
                 {
                     name: "HILLTOP",
-                    description: "American cheese, lettuce, tomato and onion; add bacon | 2"
+                    description: "American cheese, lettuce, tomato, and onion; add bacon | 2",
+                    price: "13.95"
                 },
                 {
                     name: "BBQ BACON",
-                    description: "Cheddar cheese, bacon, crispy onion straws and BBQ sauce"
+                    description: "Cheddar cheese, bacon, crispy onion straws, BBQ sauce",
+                    price: "14.95"
                 },
                 {
                     name: "MR. JIMMY",
-                    description: "American and cheddar cheese, grilled onions, lettuce, tomato and Jimmy sauce"
+                    description: "American and cheddar cheese, grilled onions, lettuce, tomato, Jimmy sauce",
+                    price: "14.95"
                 },
                 {
                     name: "'SHROOM & SWISS",
-                    description: "Swiss cheese, sautéed mushrooms and garlic aioli"
+                    description: "Swiss cheese, grilled mushrooms, garlic aioli",
+                    price: "14.95"
                 },
                 {
                     name: "PATTY MELT",
-                    description: "1/2 lb patty with swiss cheese, grilled onions and jimmy sauce on marble rye sourdough bread"
+                    description: "½ lb patty, Swiss cheese, grilled onions, Jimmy sauce on marble rye sourdough bread",
+                    price: "14.95"
                 }
             ]
         },
         {
             title: "HANDHELDS",
-            subtitle: "All handhelds are served with chips. Upgrade to waffle fries for $2.50 or a side salad for $3.50",
+            subtitle: "Served with chips. Upgrade to waffle fries for $2.50. Upgrade to side salad or cup of chili for $3.50",
             items: [
                 {
                     name: "TERIYAKI CHICKEN SANDWICH",
-                    description: "Marinated grilled chicken breast, swiss cheese, bacon, lettuce, tomato, onion and mayo"
-                },
-                {
-                    name: "BUFFALO CHICKEN WRAP",
-                    description: "Crispy buffalo chicken, celery, lettuce, mixed cheese and ranch dressing"
-                },
-                {
-                    name: "FIRECRACKER CHICKEN WRAP",
-                    description: "Crispy firecracker chicken, white rice, pico de gallo, mixed cheese and ranch dressing"
+                    description: "Marinated chicken, Swiss cheese, bacon, lettuce, tomato, onion, mayo",
+                    price: "14.95"
                 },
                 {
                     name: "CHICKEN STRIPS",
-                    description: "4 strips with your choice of dipping sauce"
+                    description: "Four strips with choice of dipping sauce",
+                    price: "13.95"
+                },
+                {
+                    name: "BUFFALO CHICKEN WRAP",
+                    description: "Crispy buffalo chicken, celery, lettuce, cheese, ranch dressing",
+                    price: "14.95"
+                },
+                {
+                    name: "FIRECRACKER CHICKEN WRAP",
+                    description: "Crispy firecracker chicken, white rice, pico de gallo, cheese, ranch dressing",
+                    price: "14.95"
+                },
+                {
+                    name: "WALLEYE TACOS",
+                    description: "Blackened walleye, lettuce, pico de gallo, cheese, onions, jalapeño aioli on flour tortillas",
+                    price: "15.95"
+                }
+            ]
+        },
+        {
+            title: "APPETIZERS",
+            items: [
+                {
+                    name: "TRADITIONAL BONE-IN WINGS",
+                    description: "Buffalo, Firecracker, BBQ or Cajun Dry Rub. Served with ranch or bleu cheese dressing",
+                    price: "15.95"
+                },
+                {
+                    name: "BONELESS WINGS",
+                    description: "Buffalo, Firecracker or BBQ. Served with ranch or bleu cheese dressing",
+                    price: "14.95"
+                },
+                {
+                    name: "BUFFALO CHICKEN WONTONS",
+                    description: "Buffalo chicken, cream cheese, celery, green onion. Served with ranch or bleu cheese dressing",
+                    price: "15.95"
+                },
+                {
+                    name: "CHEESE CURDS",
+                    description: "Served with a side of marinara",
+                    price: "12.95"
                 }
             ]
         },
@@ -110,13 +133,31 @@ const Menu = () => {
             items: [
                 {
                     name: "BROASTED CHICKEN DINNER",
-                    description: "A breast, wing, thigh and a drummy broasted in house with homemade coleslaw and waffle fries"
+                    description: "A breast, wing, thigh, and drummy broasted in-house. Served with homemade coleslaw and waffle fries",
+                    price: "17.95"
+                }
+            ]
+        },
+        {
+            title: "CHILI",
+            subtitle: "topped with sour cream, cheese and green onions",
+            items: [
+                {
+                    name: "CUP",
+                    description: "",
+                    price: "5.95"
+                },
+                {
+                    name: "BOWL",
+                    description: "",
+                    price: "7.95"
                 }
             ]
         },
         {
             title: "SHAKES",
             subtitle: "all shakes are topped with whipped cream & cherry",
+            price: "6.95",
             items: [
                 {
                     name: "VANILLA",
@@ -204,9 +245,16 @@ const Menu = () => {
                                     transitionDelay: menuGridVisible ? `${sectionIndex * 150}ms` : '0ms'
                                 }}
                             >
-                                <h3 className="text-2xl font-bold text-black mb-4 font-roboto-slab tracking-wide">
-                                    {section.title}
-                                </h3>
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-2xl font-bold text-black font-roboto-slab tracking-wide">
+                                        {section.title}
+                                    </h3>
+                                    {'price' in section && section.price && (
+                                        <span className="text-gray-500 text-lg">
+                                            ${section.price}
+                                        </span>
+                                    )}
+                                </div>
                                 {section.subtitle && (
                                     <p className="text-sm text-gray-600 mb-6 italic border-l-4 border-gray-300 pl-4">
                                         {section.subtitle}
@@ -246,6 +294,13 @@ const Menu = () => {
                                                             </p>
                                                         )}
                                                     </div>
+                                                    {'price' in item && item.price && (
+                                                        <div className="ml-4 flex-shrink-0">
+                                                            <span className="text-gray-500 text-lg">
+                                                                ${item.price}
+                                                            </span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         ))}
@@ -283,12 +338,22 @@ const Menu = () => {
                         <p className="text-black/70 mb-6">
                             *Menu items and prices subject to change. Please call ahead for current availability.
                         </p>
-                        <Link
-                            href="tel:7632728140"
-                            className="inline-flex items-center px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-gray-800 transform hover:scale-105 transition-all duration-200"
-                        >
-                            Call to Order: 763-272-8140
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Link
+                                href="tel:7632728140"
+                                className="inline-flex items-center px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-gray-800 transform hover:scale-105 transition-all duration-200"
+                            >
+                                Call to Order: 763-272-8140
+                            </Link>
+                            <Link
+                                href="https://www.toasttab.com/hilltophanover"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-8 py-4 bg-red-600 text-white rounded-full font-medium hover:bg-red-700 transform hover:scale-105 transition-all duration-200"
+                            >
+                                Order Online
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

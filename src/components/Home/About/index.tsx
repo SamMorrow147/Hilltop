@@ -20,8 +20,8 @@ const About = () => {
                             : 'translate-y-12 opacity-0'
                     }`}
                 >
-                    <p className="text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab text-black">OUR STORY</p>
-                    <h2 className="text-3xl lg:text-5xl font-semibold font-roboto-slab text-black">
+                    <p className="text-lg font-normal mb-3 tracking-widest uppercase font-roboto-slab text-white">OUR STORY</p>
+                    <h2 className="text-3xl lg:text-5xl font-semibold font-roboto-slab text-white">
                         Hilltop Bar & Grill – Re-Established 2025
                     </h2>
                 </div>

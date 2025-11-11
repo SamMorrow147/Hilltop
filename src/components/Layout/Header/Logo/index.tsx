@@ -6,7 +6,7 @@ const Logo: React.FC<{ size?: number; mobileSize?: number }> = ({ size = 150, mo
   const responsiveMobileSize = mobileSize || size;
 
   return (
-    <Link href="/" className="flex items-center justify-center transition-all duration-300">
+    <Link href="/" className="flex items-center justify-start transition-all duration-300">
       <Image
         src="/images/logo/new-logo.png"
         alt="Hilltop Bar & Grill Logo"
