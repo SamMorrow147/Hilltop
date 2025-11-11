@@ -17,31 +17,6 @@ const Menu = () => {
 
     const menuSections = [
         {
-            title: "SALADS & BOWLS",
-            items: [
-                {
-                    name: "CHIPOTLE BOWL",
-                    description: "Southwest chicken, onions, peppers, black beans, queso fresco, pepitas, guacamole, brown rice, cilantro lime dressing. Available with plain chicken",
-                    price: "16.95"
-                },
-                {
-                    name: "COBB SALAD",
-                    description: "Marinated chicken, lettuce, bacon, egg, avocado, tomato, onion, craisins, cheese. Available with plain chicken",
-                    price: "14.95"
-                },
-                {
-                    name: "AHI TUNA POKE BOWL",
-                    description: "Raw, marinated ahi tuna, avocado, carrots, cucumbers, radishes, edamame, sesame seeds, scallion, jasmine rice, Thai chili dressing",
-                    price: "16.95"
-                },
-                {
-                    name: "CHICKEN QUINOA SALAD",
-                    description: "Blackened chicken, spinach, quinoa, avocado, peppers, jalapeños, feta, honey citrus, mango yogurt dressing",
-                    price: "14.95"
-                }
-            ]
-        },
-        {
             title: "HILLY SMASH BURGERS",
             subtitle: "Two ¼ pound smashed patties served with chips. Upgrade to waffle fries for $2.50. Upgrade to side salad or cup of chili for $3.50. All burgers are gluten friendly",
             items: [
@@ -69,6 +44,34 @@ const Menu = () => {
                     name: "PATTY MELT",
                     description: "½ lb patty, Swiss cheese, grilled onions, Jimmy sauce on marble rye sourdough bread",
                     price: "14.95"
+                }
+            ]
+        },
+        {
+            title: "SALADS & BOWLS",
+            items: [
+                {
+                    name: "CHIPOTLE BOWL",
+                    description: "Southwest chicken, onions, peppers, black beans, queso fresco, pepitas, guacamole, brown rice, cilantro lime dressing. Available with plain chicken",
+                    price: "16.95",
+                    dietary: "[GF]"
+                },
+                {
+                    name: "COBB SALAD",
+                    description: "Marinated chicken, lettuce, bacon, egg, avocado, tomato, onion, craisins, cheese. Available with plain chicken",
+                    price: "14.95",
+                    dietary: "[GF]"
+                },
+                {
+                    name: "AHI TUNA POKE BOWL",
+                    description: "Raw, marinated ahi tuna, avocado, carrots, cucumbers, radishes, edamame, sesame seeds, scallion, jasmine rice, Thai chili dressing",
+                    price: "16.95"
+                },
+                {
+                    name: "CHICKEN QUINOA SALAD",
+                    description: "Blackened chicken, spinach, quinoa, avocado, peppers, jalapeños, feta, honey citrus, mango yogurt dressing",
+                    price: "14.95",
+                    dietary: "[GF]"
                 }
             ]
         },
@@ -109,7 +112,8 @@ const Menu = () => {
                 {
                     name: "TRADITIONAL BONE-IN WINGS",
                     description: "Buffalo, Firecracker, BBQ or Cajun Dry Rub. Served with ranch or bleu cheese dressing",
-                    price: "15.95"
+                    price: "15.95",
+                    dietary: "[GF]"
                 },
                 {
                     name: "BONELESS WINGS",
@@ -278,6 +282,15 @@ const Menu = () => {
                                                     <div className="flex-1">
                                                         <h4 className="font-semibold text-black text-lg flex items-center">
                                                             {item.name}
+                                                            {(item as any).dietary && (
+                                                                <Image
+                                                                    src="/images/gluten-free.svg"
+                                                                    alt="Gluten-free"
+                                                                    width={20}
+                                                                    height={20}
+                                                                    className="ml-2"
+                                                                />
+                                                            )}
                                                         </h4>
                                                         {item.description && (
                                                             <p className="text-gray-700 mt-2 text-sm leading-relaxed">
