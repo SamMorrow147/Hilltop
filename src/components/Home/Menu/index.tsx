@@ -278,15 +278,6 @@ const Menu = () => {
                                                     <div className="flex-1">
                                                         <h4 className="font-semibold text-black text-lg flex items-center">
                                                             {item.name}
-                                                            {'dietary' in item && item.dietary && (
-                                                                <Image
-                                                                    src="/images/gluten-free.svg"
-                                                                    alt="Gluten-free"
-                                                                    width={20}
-                                                                    height={20}
-                                                                    className="ml-2"
-                                                                />
-                                                            )}
                                                         </h4>
                                                         {item.description && (
                                                             <p className="text-gray-700 mt-2 text-sm leading-relaxed">
