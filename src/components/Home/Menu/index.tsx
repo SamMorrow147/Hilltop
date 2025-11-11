@@ -249,16 +249,9 @@ const Menu = () => {
                                     transitionDelay: menuGridVisible ? `${sectionIndex * 150}ms` : '0ms'
                                 }}
                             >
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-black font-roboto-slab tracking-wide">
-                                        {section.title}
-                                    </h3>
-                                    {'price' in section && section.price && (
-                                        <span className="text-gray-500 text-lg">
-                                            ${section.price}
-                                        </span>
-                                    )}
-                                </div>
+                                <h3 className="text-2xl font-bold text-black mb-4 font-roboto-slab tracking-wide">
+                                    {section.title}
+                                </h3>
                                 {section.subtitle && (
                                     <p className="text-sm text-gray-600 mb-6 italic border-l-4 border-gray-300 pl-4">
                                         {section.subtitle}
@@ -298,13 +291,6 @@ const Menu = () => {
                                                             </p>
                                                         )}
                                                     </div>
-                                                    {'price' in item && item.price && (
-                                                        <div className="ml-4 flex-shrink-0">
-                                                            <span className="text-gray-500 text-lg">
-                                                                ${item.price}
-                                                            </span>
-                                                        </div>
-                                                    )}
                                                 </div>
                                             </div>
                                         ))}
