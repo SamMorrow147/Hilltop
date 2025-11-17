@@ -6,5 +6,6 @@ export type SubmenuItem = {
   export type HeaderItem = {
     label: string;
     href: string;
+    external?: boolean;
     submenu?: SubmenuItem[];
   };

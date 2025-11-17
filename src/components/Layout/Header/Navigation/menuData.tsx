@@ -5,5 +5,6 @@ export const headerData: HeaderItem[] = [
   { label: "History", href: "/#history-section" },
   { label: "Menu", href: "/#menu-section" },
   { label: "Gallery", href: "/#gallery-section" },
+  { label: "Order Online", href: "https://www.toasttab.com/hilltophanover", external: true },
   { label: "Hiring", href: "/hiring" },
 ];
