@@ -7,12 +7,10 @@ import Logo from "./Logo";
 import Image from "next/image";
 import HeaderLink from "../Header/Navigation/HeaderLink";
 import MobileHeaderLink from "../Header/Navigation/MobileHeaderLink";
-import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Header: React.FC = () => {
   const pathUrl = usePathname();
-  const { theme, setTheme } = useTheme();
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -97,11 +95,11 @@ const Header: React.FC = () => {
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 max-w-xs overflow-x-hidden ${navbarOpen ? "translate-x-0" : "translate-x-full"
-            } z-50`}
+        className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white shadow-lg transform transition-transform duration-300 max-w-xs overflow-x-hidden ${navbarOpen ? "translate-x-0" : "translate-x-full"
+          } z-50`}
         >
-          <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800">
-            <h2 className="text-lg font-bold text-black dark:text-white">
+          <div className="flex items-center justify-between p-4 bg-gray-50">
+            <h2 className="text-lg font-bold text-black">
               <Logo />
             </h2>
 
@@ -111,11 +109,11 @@ const Header: React.FC = () => {
               aria-label="Close menu Modal"
             ></button>
           </div>
-          <nav className="flex flex-col items-start p-4 bg-white dark:bg-gray-900">
+          <nav className="flex flex-col items-start p-4 bg-white">
             {headerData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} onClose={() => setNavbarOpen(false)} />
             ))}
-            <div className="border-t border-gray-200 dark:border-gray-600 mt-4 pt-4 w-full">
+            <div className="border-t border-gray-200 mt-4 pt-4 w-full">
               <div className="flex items-center gap-4">
                 <Link href="https://www.facebook.com/profile.php?id=61575227142376" target="_blank" className="hover:opacity-80">
                   <Icon

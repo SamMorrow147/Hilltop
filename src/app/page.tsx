@@ -16,13 +16,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="w-full overflow-hidden px-4 bg-white dark:bg-gray-800">
-        <div className="flex justify-center py-2 bg-white dark:bg-gray-800 gap-8 md:gap-12 max-w-full">
+      <div className="w-full overflow-hidden px-4 bg-white">
+        <div className="flex justify-center py-2 bg-white gap-8 md:gap-12 max-w-full">
           {Array.from({ length: 20 }).map((_, i) => (
-            <span key={i} className="w-2 h-2 rounded-full flex-shrink-0 hidden md:inline-block" style={{ backgroundColor: '#ffffff' }}></span>
+            <span key={i} className="w-2 h-2 rounded-full flex-shrink-0 hidden md:inline-block" style={{ backgroundColor: '#000000' }}></span>
           ))}
           {Array.from({ length: 10 }).map((_, i) => (
-            <span key={i + 20} className="w-2 h-2 rounded-full flex-shrink-0 md:hidden" style={{ backgroundColor: '#ffffff' }}></span>
+            <span key={i + 20} className="w-2 h-2 rounded-full flex-shrink-0 md:hidden" style={{ backgroundColor: '#000000' }}></span>
           ))}
         </div>
       </div>
