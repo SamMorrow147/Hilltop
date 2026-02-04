@@ -4,7 +4,6 @@ import OrderCallout from "@/components/Home/OrderCallout";
 import About from "@/components/Home/About";
 import Menu from "@/components/Home/Menu";
 import Gallery from "@/components/Home/Gallery";
-import HiringCTA from "@/components/Home/HiringCTA";
 import HoursLocation from "@/components/Home/HoursLocation";
 import { Metadata } from "next";
 
@@ -31,7 +30,6 @@ export default function Home() {
       <About />
       <Menu />
       <Gallery />
-      <HiringCTA />
       <HoursLocation />
     </main>
   );

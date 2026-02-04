@@ -76,10 +76,12 @@ const Hero = () => {
                         }`}
                         style={{ transitionDelay: '1200ms' }}>
                             <Link
-                                href='#menu-section'
+                                href='https://www.toasttab.com/hilltophanover'
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className='text-xl font-medium rounded-full text-black py-5 px-6 lg:px-14 border border-white bg-white hover:bg-gray-100 transform hover:scale-105 transition-transform duration-200'
                             >
-                                View Our Menu
+                                Order Online
                             </Link>
                             <Link
                                 href='#history-section'

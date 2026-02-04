@@ -42,7 +42,7 @@ const Menu = () => {
                 },
                 {
                     name: "PATTY MELT",
-                    description: "½ lb patty, Swiss cheese, grilled onions, Jimmy sauce on marble rye sourdough bread",
+                    description: "½ lb patty, Swiss cheese, grilled onions, Jimmy sauce on pumpernickel",
                     price: "14.95"
                 }
             ]
@@ -98,11 +98,6 @@ const Menu = () => {
                     name: "FIRECRACKER CHICKEN WRAP",
                     description: "Crispy firecracker chicken, white rice, pico de gallo, cheese, ranch dressing",
                     price: "14.95"
-                },
-                {
-                    name: "WALLEYE TACOS",
-                    description: "Blackened walleye, lettuce, pico de gallo, cheese, onions, jalapeño aioli on flour tortillas",
-                    price: "15.95"
                 }
             ]
         },
@@ -129,6 +124,16 @@ const Menu = () => {
                     name: "CHEESE CURDS",
                     description: "Served with a side of marinara",
                     price: "12.95"
+                },
+                {
+                    name: "BEEF NACHOS",
+                    description: "Corn tortilla chips, queso, ground beef, jalapeños, pico de gallo, lettuce, seasoned sour cream. Add guacamole +2",
+                    price: "12.95"
+                },
+                {
+                    name: "CHIPS, SALSA & QUESO",
+                    description: "Corn tortilla chips with queso and salsa. Add guacamole +2",
+                    price: "8.95"
                 }
             ]
         },
@@ -144,7 +149,7 @@ const Menu = () => {
         },
         {
             title: "CHILI",
-            subtitle: "topped with sour cream, cheese and green onions",
+            subtitle: "topped with sour cream, cheese, green onions & garlic toast",
             items: [
                 {
                     name: "CUP",
@@ -179,6 +184,28 @@ const Menu = () => {
                     name: "OREO",
                     description: ""
                 }
+            ]
+        },
+        {
+            title: "HAPPY HOUR",
+            subtitle: "Every day 2–6pm, Sunday–Thursday 8pm to close",
+            items: [
+                { type: "priceHeading", name: "$3" },
+                { name: "TAP BEER PINTS", description: "16oz Coors Light, Hamms, or Mich Golden", price: "3" },
+                { name: "RAIL DRINKS", description: "", price: "3" },
+                { type: "priceHeading", name: "$5" },
+                { name: "TAP BEER MUGS", description: "25oz Coors Light, Hamms, or Mich Golden", price: "5" },
+                { name: "HOUSE WINE", description: "Chardonnay & Cabernet", price: "5" },
+                { type: "note", name: "All other beer, wine and seltzers are $1 off!" },
+                { type: "priceHeading", name: "$6" },
+                { name: "CHIPS WITH SALSA & QUESO", description: "Add guacamole | 3", price: "6" },
+                { type: "priceHeading", name: "$8" },
+                { name: "CHEESE CURDS", description: "", price: "8" },
+                { name: "BEEF NACHOS", description: "", price: "8" },
+                { name: "BUFFALO CHICKEN WONTONS", description: "2 wontons per order", price: "8" },
+                { type: "priceHeading", name: "$10" },
+                { name: "BONE-IN TRADITIONAL WINGS", description: "Buffalo, firecracker, BBQ, or Cajun dry rub", price: "10" },
+                { name: "BONELESS WINGS", description: "Buffalo, firecracker, or BBQ", price: "10" }
             ]
         }
     ];
@@ -241,30 +268,35 @@ const Menu = () => {
                             <div 
                                 key={section.title}
                                 className={`bg-white rounded-lg p-6 shadow-lg transform transition-all duration-800 ease-out ${
+                                    section.title === "HAPPY HOUR" ? "lg:col-span-2" : ""
+                                } ${
                                     menuGridVisible 
-                                        ? 'translate-y-0 opacity-100' 
-                                        : 'translate-y-12 opacity-0'
+                                        ? "translate-y-0 opacity-100" 
+                                        : "translate-y-12 opacity-0"
                                 }`}
                                 style={{ 
-                                    transitionDelay: menuGridVisible ? `${sectionIndex * 150}ms` : '0ms'
+                                    transitionDelay: menuGridVisible ? `${sectionIndex * 150}ms` : "0ms"
                                 }}
                             >
-                                <div className="flex items-center justify-between mb-4">
+                                <div className={`flex items-center ${section.title === "HAPPY HOUR" ? "mb-1 justify-between" : "mb-4 justify-between"}`}>
                                     <h3 className="text-2xl font-bold text-black font-roboto-slab tracking-wide">
                                         {section.title}
                                     </h3>
-                                    {'price' in section && section.price && (
+                                    {section.title !== "HAPPY HOUR" && "price" in section && section.price && (
                                         <span className="text-gray-500 text-base">
                                             ${section.price}
                                         </span>
                                     )}
                                 </div>
                                 {section.subtitle && (
-                                    <p className="text-sm text-gray-600 mb-6 italic border-l-4 border-gray-300 pl-4">
+                                    <p className={`text-sm text-gray-600 ${section.title === "HAPPY HOUR" ? "text-left font-normal mb-4" : "italic border-l-4 border-gray-300 pl-4 mb-6"}`}>
                                         {section.subtitle}
                                     </p>
                                 )}
-                                <div className={`space-y-4 ${(section as any).comingSoon ? 'relative' : ''}`}>
+                                {section.title === "HAPPY HOUR" && (
+                                    <div className="border-b border-gray-300 mb-6" aria-hidden />
+                                )}
+                                <div className={`space-y-4 ${(section as any).comingSoon ? "relative" : ""}`}>
                                     {(section as any).comingSoon && (
                                         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-10 rounded-lg">
                                             <h3 className="text-3xl font-bold text-black font-roboto-slab tracking-wide">
@@ -272,42 +304,104 @@ const Menu = () => {
                                             </h3>
                                         </div>
                                     )}
-                                    <div className={(section as any).comingSoon ? 'blur-sm opacity-50' : ''}>
-                                        {section.items.map((item, itemIndex) => (
-                                            <div 
-                                                key={itemIndex}
-                                                className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0"
-                                            >
-                                                <div className="flex items-start justify-between">
-                                                    <div className="flex-1">
-                                                        <h4 className="font-semibold text-black text-lg flex items-center">
-                                                            {item.name}
-                                                            {(item as any).dietary && (
-                                                                <Image
-                                                                    src="/images/gluten-free.svg"
-                                                                    alt="Gluten-free"
-                                                                    width={20}
-                                                                    height={20}
-                                                                    className="ml-2"
-                                                                />
+                                    <div className={(section as any).comingSoon ? "blur-sm opacity-50" : ""}>
+                                        {section.title === "HAPPY HOUR" ? (() => {
+                                            type HappyHourTier = { type: "tier"; price: string; items: { name: string; description?: string }[]; note?: string };
+                                            const blocks: HappyHourTier[] = [];
+                                            let currentTier: HappyHourTier | null = null;
+                                            for (const item of section.items) {
+                                                const it = item as { type?: string; name: string; description?: string };
+                                                if (it.type === "priceHeading") {
+                                                    if (currentTier) blocks.push(currentTier);
+                                                    currentTier = { type: "tier", price: it.name, items: [] };
+                                                } else if (it.type === "note") {
+                                                    if (currentTier) {
+                                                        currentTier.note = it.name;
+                                                        blocks.push(currentTier);
+                                                        currentTier = null;
+                                                    }
+                                                } else if (currentTier) {
+                                                    currentTier.items.push({ name: it.name, description: it.description });
+                                                }
+                                            }
+                                            if (currentTier) blocks.push(currentTier);
+                                            return (
+                                                <div className="w-max max-w-full mx-auto">
+                                                    {blocks.map((block, blockIndex) => (
+                                                        <div key={blockIndex} className={blockIndex === 0 ? "pt-0" : "pt-5"}>
+                                                            <div className="flex gap-4 sm:gap-6 items-center">
+                                                                <div className="flex-shrink-0 w-14 sm:w-16 flex items-center justify-center self-stretch">
+                                                                    <span className="text-4xl sm:text-5xl font-bold text-black font-roboto-slab leading-none">
+                                                                        {block.price}
+                                                                    </span>
+                                                                </div>
+                                                                <div className="flex-1 min-w-0 space-y-3">
+                                                                    {block.items.map((menuItem, i) => (
+                                                                        <div key={i}>
+                                                                            <h4 className="font-bold text-black text-base uppercase tracking-wide">
+                                                                                {menuItem.name}
+                                                                            </h4>
+                                                                            {menuItem.description && (
+                                                                                <p className="text-gray-600 text-sm mt-0.5 font-normal normal-case pl-0 sm:pl-4">
+                                                                                    {menuItem.description}
+                                                                                </p>
+                                                                            )}
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            </div>
+                                                            {block.note && (
+                                                                <div className="flex gap-4 sm:gap-6 mt-2">
+                                                                    <div className="w-14 sm:w-16 flex-shrink-0" aria-hidden />
+                                                                    <p className="text-left text-black font-bold italic uppercase text-sm py-3 tracking-wide">
+                                                                        {block.note}
+                                                                    </p>
+                                                                </div>
                                                             )}
-                                                        </h4>
-                                                        {item.description && (
-                                                            <p className="text-gray-700 mt-2 text-sm leading-relaxed">
-                                                                {item.description}
-                                                            </p>
+                                                            <div className={`border-b border-dotted border-gray-400 -mx-6 px-6 ${block.price === "$6" ? "mt-4" : "mt-1"}`} />
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            );
+                                        })() : section.items.map((item, itemIndex) => {
+                                            const itemType = (item as any).type;
+                                            if (itemType === "priceHeading" || itemType === "note") return null;
+                                            return (
+                                                <div 
+                                                    key={itemIndex}
+                                                    className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0"
+                                                >
+                                                    <div className="flex items-start justify-between">
+                                                        <div className="flex-1">
+                                                            <h4 className="font-semibold text-black text-lg flex items-center">
+                                                                {item.name}
+                                                                {(item as any).dietary && (
+                                                                    <Image
+                                                                        src="/images/gluten-free.svg"
+                                                                        alt="Gluten-free"
+                                                                        width={20}
+                                                                        height={20}
+                                                                        className="ml-2"
+                                                                    />
+                                                                )}
+                                                            </h4>
+                                                            {item.description && (
+                                                                <p className="text-gray-700 mt-2 text-sm leading-relaxed">
+                                                                    {item.description}
+                                                                </p>
+                                                            )}
+                                                        </div>
+                                                        {"price" in item && item.price && (
+                                                            <div className="ml-4 flex-shrink-0">
+                                                                <span className="text-gray-500 text-base">
+                                                                    ${item.price}
+                                                                </span>
+                                                            </div>
                                                         )}
                                                     </div>
-                                                    {'price' in item && item.price && (
-                                                        <div className="ml-4 flex-shrink-0">
-                                                            <span className="text-gray-500 text-base">
-                                                                ${item.price}
-                                                            </span>
-                                                        </div>
-                                                    )}
                                                 </div>
-                                            </div>
-                                        ))}
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </div>
