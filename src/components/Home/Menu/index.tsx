@@ -268,7 +268,7 @@ const Menu = () => {
                             <div 
                                 key={section.title}
                                 className={`bg-white rounded-lg p-6 shadow-lg transform transition-all duration-800 ease-out ${
-                                    section.title === "HAPPY HOUR" ? "lg:col-span-2" : ""
+                                    section.title === "HAPPY HOUR" ? "lg:col-span-1 lg:col-start-1" : ""
                                 } ${
                                     menuGridVisible 
                                         ? "translate-y-0 opacity-100" 
