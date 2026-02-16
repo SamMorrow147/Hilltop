@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/Home/Hero";
 import OrderCallout from "@/components/Home/OrderCallout";
 import About from "@/components/Home/About";
+import NewsletterSignup from "@/components/Home/NewsletterSignup";
 import Menu from "@/components/Home/Menu";
 import Gallery from "@/components/Home/Gallery";
 import HoursLocation from "@/components/Home/HoursLocation";
@@ -28,6 +29,7 @@ export default function Home() {
         </div>
       </div>
       <About />
+      <NewsletterSignup />
       <Menu />
       <Gallery />
       <HoursLocation />
