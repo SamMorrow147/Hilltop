@@ -18,7 +18,7 @@ const Menu = () => {
     const menuSections = [
         {
             title: "HILLY SMASH BURGERS",
-            subtitle: "Two ¼ pound smashed patties served with chips. Upgrade to waffle fries for $2.50. Upgrade to side salad or cup of chili for $3.50. All burgers are gluten friendly",
+            subtitle: "two ¼ pound smashed patties served with chips. upgrade to waffle fries for $2.50 or a side salad for $3.50",
             items: [
                 {
                     name: "HILLTOP",
@@ -72,12 +72,17 @@ const Menu = () => {
                     description: "Blackened chicken, spinach, quinoa, avocado, peppers, jalapeños, feta, honey citrus, mango yogurt dressing",
                     price: "14.95",
                     dietary: "[GF]"
+                },
+                {
+                    name: "HONEY GLAZED SALMON BOWL",
+                    description: "Honey glazed grilled salmon topped with green onions, sesame seeds and lemon served over white rice with broccoli, bell peppers and onions",
+                    price: "17.95"
                 }
             ]
         },
         {
             title: "HANDHELDS",
-            subtitle: "Served with chips. Upgrade to waffle fries for $2.50. Upgrade to side salad or cup of chili for $3.50",
+            subtitle: "all handhelds are served with chips. upgrade to waffle fries for $2.50 or a side salad for $3.50",
             items: [
                 {
                     name: "TERIYAKI CHICKEN SANDWICH",
@@ -148,24 +153,8 @@ const Menu = () => {
             ]
         },
         {
-            title: "CHILI",
-            subtitle: "topped with sour cream, cheese, green onions & garlic toast",
-            items: [
-                {
-                    name: "CUP",
-                    description: "",
-                    price: "5.95"
-                },
-                {
-                    name: "BOWL",
-                    description: "",
-                    price: "7.95"
-                }
-            ]
-        },
-        {
-            title: "SHAKES",
-            subtitle: "all shakes are topped with whipped cream & cherry",
+            title: "MILKSHAKES & MALTS",
+            subtitle: "topped with whip cream and a cherry",
             price: "6.95",
             items: [
                 {
@@ -183,6 +172,10 @@ const Menu = () => {
                 {
                     name: "OREO",
                     description: ""
+                },
+                {
+                    type: "boldNote",
+                    name: "ASK ABOUT OUR FLAVOR OF THE MONTH!"
                 }
             ]
         },
@@ -198,14 +191,21 @@ const Menu = () => {
                 { name: "HOUSE WINE", description: "Chardonnay & Cabernet", price: "5" },
                 { type: "note", name: "All other beer, wine and seltzers are $1 off!" },
                 { type: "priceHeading", name: "$6" },
-                { name: "CHIPS WITH SALSA & QUESO", description: "Add guacamole | 3", price: "6" },
+                { name: "CHIPS WITH SALSA & QUESO", description: "add guacamole | 2", price: "6" },
                 { type: "priceHeading", name: "$8" },
                 { name: "CHEESE CURDS", description: "", price: "8" },
                 { name: "BEEF NACHOS", description: "", price: "8" },
-                { name: "BUFFALO CHICKEN WONTONS", description: "2 wontons per order", price: "8" },
-                { type: "priceHeading", name: "$10" },
-                { name: "BONE-IN TRADITIONAL WINGS", description: "Buffalo, firecracker, BBQ, or Cajun dry rub", price: "10" },
-                { name: "BONELESS WINGS", description: "Buffalo, firecracker, or BBQ", price: "10" }
+                { type: "priceHeading", name: "$12" },
+                { name: "BUFFALO CHICKEN WONTONS", description: "", price: "12" },
+                { name: "BONE-IN TRADITIONAL WINGS", description: "Buffalo, firecracker, BBQ or Cajun dry rub", price: "12" },
+                { name: "BONELESS WINGS", description: "Buffalo, firecracker or BBQ", price: "12" },
+                { type: "cocktailsHeading", name: "HILLY SPECIALTY COCKTAILS" },
+                { name: "HILLY LEMONADE", description: "vodka, peach schnapps, fresh strawberries, lemon wheel & lemonade (available as mocktail)" },
+                { name: "ALL PIÑA, NO COLADA", description: "blanco tequila, lemon juice, simple syrup, pineapple juice, pineapple & cinnamon (available as mocktail)" },
+                { name: "MAIN SQUEEZE SPRITZ", description: "limoncello, lemon juice, champagne & lemon-lime soda" },
+                { name: "HONEY BEE OLD FASHIONED", description: "woodford reserve bourbon, house-made honey vanilla syrup, toasted almond bitters" },
+                { name: "GIN BLOSSOMS", description: "gin, st. germain, lemon juice, cucumber, fresh mint, raspberry puree & soda water" },
+                { name: "ESPRESSO MARTINI", description: "stoli vanilla vodka, kahlua, baileys, espresso" }
             ]
         }
     ];
@@ -306,9 +306,12 @@ const Menu = () => {
                                     )}
                                     <div className={(section as any).comingSoon ? "blur-sm opacity-50" : ""}>
                                         {section.title === "HAPPY HOUR" ? (() => {
-                                            type HappyHourTier = { type: "tier"; price: string; items: { name: string; description?: string }[]; note?: string };
-                                            const blocks: HappyHourTier[] = [];
-                                            let currentTier: HappyHourTier | null = null;
+                                            type HHBlock =
+                                                | { type: "tier"; price: string; items: { name: string; description?: string }[]; note?: string }
+                                                | { type: "cocktails"; heading: string; items: { name: string; description?: string }[] };
+                                            const blocks: HHBlock[] = [];
+                                            let currentTier: (HHBlock & { type: "tier" }) | null = null;
+                                            let currentCocktails: (HHBlock & { type: "cocktails" }) | null = null;
                                             for (const item of section.items) {
                                                 const it = item as { type?: string; name: string; description?: string };
                                                 if (it.type === "priceHeading") {
@@ -320,14 +323,45 @@ const Menu = () => {
                                                         blocks.push(currentTier);
                                                         currentTier = null;
                                                     }
+                                                } else if (it.type === "cocktailsHeading") {
+                                                    if (currentTier) { blocks.push(currentTier); currentTier = null; }
+                                                    currentCocktails = { type: "cocktails", heading: it.name, items: [] };
+                                                } else if (currentCocktails) {
+                                                    currentCocktails.items.push({ name: it.name, description: it.description });
                                                 } else if (currentTier) {
                                                     currentTier.items.push({ name: it.name, description: it.description });
                                                 }
                                             }
                                             if (currentTier) blocks.push(currentTier);
+                                            if (currentCocktails) blocks.push(currentCocktails);
                                             return (
                                                 <div className="w-max max-w-full mx-auto">
-                                                    {blocks.map((block, blockIndex) => (
+                                                    {blocks.map((block, blockIndex) => {
+                                                        if (block.type === "cocktails") {
+                                                            return (
+                                                                <div key={blockIndex} className="pt-6">
+                                                                    <div className="border-t border-gray-300 -mx-6 mb-5" />
+                                                                    <h4 className="text-lg font-bold text-black font-roboto-slab tracking-wide uppercase mb-4">
+                                                                        {block.heading}
+                                                                    </h4>
+                                                                    <div className="space-y-3">
+                                                                        {block.items.map((cocktail, i) => (
+                                                                            <div key={i}>
+                                                                                <h5 className="font-bold text-black text-base uppercase tracking-wide">
+                                                                                    {cocktail.name}
+                                                                                </h5>
+                                                                                {cocktail.description && (
+                                                                                    <p className="text-gray-600 text-sm mt-0.5 font-normal normal-case pl-0 sm:pl-4">
+                                                                                        {cocktail.description}
+                                                                                    </p>
+                                                                                )}
+                                                                            </div>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        }
+                                                        return (
                                                         <div key={blockIndex} className={blockIndex === 0 ? "pt-0" : "pt-5"}>
                                                             <div className="flex gap-4 sm:gap-6 items-center">
                                                                 <div className="flex-shrink-0 w-14 sm:w-16 flex items-center justify-center self-stretch">
@@ -360,12 +394,22 @@ const Menu = () => {
                                                             )}
                                                             <div className={`border-b border-dotted border-gray-400 -mx-6 px-6 ${block.price === "$6" ? "mt-4" : "mt-1"}`} />
                                                         </div>
-                                                    ))}
+                                                        );
+                                                    })}
                                                 </div>
                                             );
                                         })() : section.items.map((item, itemIndex) => {
                                             const itemType = (item as any).type;
                                             if (itemType === "priceHeading" || itemType === "note") return null;
+                                            if (itemType === "boldNote") {
+                                                return (
+                                                    <div key={itemIndex} className="pt-2">
+                                                        <p className="font-bold text-black text-sm uppercase tracking-wide text-center">
+                                                            {(item as any).name}
+                                                        </p>
+                                                    </div>
+                                                );
+                                            }
                                             return (
                                                 <div 
                                                     key={itemIndex}
